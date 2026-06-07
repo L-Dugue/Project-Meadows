@@ -13,6 +13,7 @@ public abstract class Character : MonoBehaviour
 
     // Protected Fields
     [SerializeField] protected bool facesLeftByDefault = false;
+    [SerializeField] protected PlayerInteraction playerInteraction;
 
     // Properties
     public float Speed { get { return m_speed; } }

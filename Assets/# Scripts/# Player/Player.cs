@@ -12,7 +12,24 @@ public class Player : Character
     public void OnMove(InputAction.CallbackContext context) 
     {
         moveInput = context.ReadValue<Vector2>();
-        Debug.Log(moveInput);
+    }
+
+    public void OnInteract(InputAction.CallbackContext context) 
+    {
+        if (context.started) 
+        {
+            playerInteraction.PerformPickingUpItem();
+        }
+        
+    }
+
+    public void OnPrintOutContentsDEBUGGING(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInteraction.DEBUGGER();
+        }
+
     }
 
     public override void MoveCharacter()
