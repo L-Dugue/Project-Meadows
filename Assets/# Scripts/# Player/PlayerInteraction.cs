@@ -16,8 +16,12 @@ public class PlayerInteraction : MonoBehaviour
         {
             if(contact.TryGetComponent<Item>(out Item pickableItem)) 
             {
-                _inventory.AddItemToInventory(pickableItem.ItemPickedUp());
-                Destroy(pickableItem.gameObject);
+                // Checks to see if Adding the Item to the Inventory worked
+                if (_inventory.AddItemToInventory(pickableItem.ItemPickedUp()))
+                {
+                    Destroy(pickableItem.gameObject);
+                }
+
                 Debug.Log("Performing pickup");
             }
         }

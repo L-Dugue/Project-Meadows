@@ -1,13 +1,18 @@
 using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
     // Create Array for Items, with 4 slots
-    private ItemData[] _items = new ItemData[4];
+    private ItemData?[] _items = new ItemData?[4];
+
+    // Private Members
+    private bool isInventoryFull = false;
     private bool isInventoryIsEmpty = true;
 
-    public void AddItemToInventory(ItemData itemPickedUp)
+    public bool AddItemToInventory(ItemData itemPickedUp)
     {
 
         Debug.Log($"Added {itemPickedUp.GetType().Name} to Inventory\n");
@@ -16,19 +21,24 @@ public class PlayerInventory : MonoBehaviour
         {
             _items[0] = itemPickedUp;
             isInventoryIsEmpty = false;
+            return true;
         }
-        else
+        else if(!isInventoryFull)
         {
-           for(int index = 1; index < _items.Length; index++) 
+           for(int index = 0; index < _items.Length; index++) 
            {
-                if(_items[index] == null) 
+                if (_items[index] == null) 
                 {
                     _items[index] = itemPickedUp;
-                    break;
+                    isInventoryFull = (index == _items.Length - 1);
+                    return true;
                 }
-                
            }
         }
+
+
+        Debug.Log("Inventory is full!");
+        return false;
     }
 
     public void PrintOutContentsOfInventoryDEBUGGING() 
@@ -36,7 +46,7 @@ public class PlayerInventory : MonoBehaviour
         for (int index = 0; index < _items.Length; index++)
         {
             if (_items[index] == null) { continue; }
-            _items[index].PintOutInfo();
+            Debug.Log($"Name: {_items[index]?._Name}, Desc: {_items[index]?._Description}, Type Of Flower: {_items[index]?._FlowerType}");
         }
     }
 }

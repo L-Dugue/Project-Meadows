@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FlowerActual : Item
+public class Flower : Item
 {
     [SerializeField] private string FlowerName;
     [SerializeField] private string FlowerDesc;
@@ -8,7 +8,7 @@ public class FlowerActual : Item
 
     public override ItemData ItemPickedUp() 
     {
-        FlowerData flowerData = new FlowerData(FlowerName, TypeOfFlower, FlowerDesc, GetComponent<SpriteRenderer>().sprite);
+        ItemData flowerData = new ItemData(FlowerName, FlowerDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, TypeOfFlower);
         return flowerData;
     }
 }
