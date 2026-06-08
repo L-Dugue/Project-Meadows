@@ -9,7 +9,7 @@ public struct ItemData
     public readonly string _Name; // Name of the Item
     public readonly string _Description; // Description of the Item
     public readonly string _FlowerType;
-    public readonly Item itemDataType;
+    public readonly Item _ItemDataType;
 
     /// <summary>
     /// Full Param Constructor, used for Flower
@@ -24,7 +24,7 @@ public struct ItemData
         _Name = itemName;
         _Description = itemDesc;
         _FlowerType = flowerType;
-        itemDataType = item;
+        _ItemDataType = item;
     }
 
     /// <summary>
@@ -39,7 +39,7 @@ public struct ItemData
         _ImageSprite = itemSprite;
         _Name = itemName;
         _Description = itemDesc;
-        itemDataType = item;
+        _ItemDataType = item;
         _FlowerType = null;
     }
 
