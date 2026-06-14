@@ -1,4 +1,6 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -6,6 +8,10 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float _interactionRange = 1.0f;
     [SerializeField] private LayerMask _interactableLayer;
     [SerializeField] private PlayerInventory _inventory;
+
+    [Header("TileSet Settings")]
+    // Serialized Fields
+    [SerializeField] private Tilemap worldTileMap;
 
 
     public void PerformPickingUpItem()
@@ -19,7 +25,7 @@ public class PlayerInteraction : MonoBehaviour
                 // Checks to see if Adding the Item to the Inventory worked
                 if (_inventory.AddItemToInventory(pickableItem.ItemPickedUp()))
                 {
-                    Destroy(pickableItem.gameObject);
+                    RemoveItemFromTileSet(pickableItem.gameObject.transform.position);
                 }
 
                 Debug.Log("Performing pickup");
@@ -36,5 +42,12 @@ public class PlayerInteraction : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, _interactionRange);
+    }
+
+    private void RemoveItemFromTileSet(Vector3 posOfItem)
+    {
+        Debug.Log("REMOVING FROM GRID!");
+        Vector3Int cellPos = worldTileMap.WorldToCell(posOfItem);
+        worldTileMap.SetTile(cellPos, null);
     }
 }

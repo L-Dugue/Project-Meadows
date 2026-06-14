@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
@@ -16,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
     // Private Members
     private bool isInventoryFull = false;
     private bool isInventoryIsEmpty = true;
+
 
 
     private void Awake()
@@ -92,4 +94,5 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log($"Name: {_items[index]?._Name}, Desc: {_items[index]?._Description}, Type Of Flower: {_items[index]?._FlowerType}");
         }
     }
+   
 }

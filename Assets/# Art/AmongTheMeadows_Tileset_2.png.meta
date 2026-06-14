@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: 87df3fb51d6468b49bec84720f397f40
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4588652141154388168
+    second: AmongTheMeadows_Tileset_2_0
+  - first:
+      213: -4611374183883392764
+    second: AmongTheMeadows_Tileset_2_1
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 49
+        width: 7
+        height: 8
+      alignment: 9
+      pivot: {x: -0.14, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83738a87035d150c0800000000000000
+      internalID: -4588652141154388168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 16
+        height: 8
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4093933ac9b1100c0800000000000000
+      internalID: -4611374183883392764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 16
+        height: 7
+      alignment: 9
+      pivot: {x: 0.5, y: 1.148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb80801452ad9c4c974778059008fa8
+      internalID: -327245695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 49
+        width: 6
+        height: 5
+      alignment: 9
+      pivot: {x: 1.34, y: 1.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2737bc2110c292d47b91888c31e7b981
+      internalID: -759327733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 33
+        width: 7
+        height: 16
+      alignment: 9
+      pivot: {x: -0.14, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a68d24a2996484bad7446c8ab14bd0
+      internalID: 1672310647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534c9cb37a98cc74aa05e554056e7ea3
+      internalID: 1072540148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2999a684b42f4428b2a5067e755dd4
+      internalID: -917845987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 33
+        width: 9
+        height: 16
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca04975139c7c8944a1a00357e543b1a
+      internalID: 614935804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_10
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 26
+        width: 7
+        height: 7
+      alignment: 9
+      pivot: {x: -0.145, y: -0.146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf57b97acdaa7064593d256c6e5744ca
+      internalID: -90803993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 25
+        width: 16
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9826a77cdca11645a2e54981a22b903
+      internalID: 1797547626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 25
+        width: 16
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad810c2638818c9419e13ff5fd145592
+      internalID: 59897859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 27
+        width: 7
+        height: 6
+      alignment: 9
+      pivot: {x: 1.14, y: -0.33}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95259d4cb7855a4296a1fdf2460e3dc
+      internalID: 1674351925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 27
+        width: 8
+        height: 6
+      alignment: 9
+      pivot: {x: 1, y: -0.34}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64e97a79934845418d8071764c2a493
+      internalID: -339197861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 49
+        width: 10
+        height: 8
+      alignment: 9
+      pivot: {x: 0.8, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36b736cdf4b48741a72cb20c2e3fa6b
+      internalID: -738247338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 33
+        width: 8
+        height: 16
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbacf0011dbf6348a1b0bbc713e2c7e
+      internalID: 320263510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 49
+        width: 4
+        height: 5
+      alignment: 9
+      pivot: {x: -0.99, y: 1.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6ebc71e4efa3f4cad8666e9b8dbf9c
+      internalID: 1811973046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_16
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 27
+        width: 5
+        height: 6
+      alignment: 9
+      pivot: {x: -0.6, y: -0.3301}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac7dca14cbc7264481583f14d34638e
+      internalID: -1751922172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongTheMeadows_Tileset_2_17
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 33
+        width: 7
+        height: 16
+      alignment: 9
+      pivot: {x: -0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2467b40ee163148901b7de91cdfdc4
+      internalID: -282449873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ac9ece1f5d3eea44caf76c197205f0b2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":8.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      AmongTheMeadows_Tileset_2_0: -4588652141154388168
+      AmongTheMeadows_Tileset_2_1: -4611374183883392764
+      AmongTheMeadows_Tileset_2_10: -90803993
+      AmongTheMeadows_Tileset_2_11: 1797547626
+      AmongTheMeadows_Tileset_2_12: 320263510
+      AmongTheMeadows_Tileset_2_13: 59897859
+      AmongTheMeadows_Tileset_2_14: 1674351925
+      AmongTheMeadows_Tileset_2_15: 1811973046
+      AmongTheMeadows_Tileset_2_16: -1751922172
+      AmongTheMeadows_Tileset_2_17: -282449873
+      AmongTheMeadows_Tileset_2_18: -1576934944
+      AmongTheMeadows_Tileset_2_19: -1391049009
+      AmongTheMeadows_Tileset_2_2: -339197861
+      AmongTheMeadows_Tileset_2_3: -327245695
+      AmongTheMeadows_Tileset_2_4: -759327733
+      AmongTheMeadows_Tileset_2_5: 1672310647
+      AmongTheMeadows_Tileset_2_6: 1072540148
+      AmongTheMeadows_Tileset_2_7: -738247338
+      AmongTheMeadows_Tileset_2_8: -917845987
+      AmongTheMeadows_Tileset_2_9: 614935804
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
