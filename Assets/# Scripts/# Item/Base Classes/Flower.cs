@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Flower : Item
 {
@@ -6,10 +7,11 @@ public class Flower : Item
     [SerializeField] private string FlowerDesc;
     [SerializeField] private string TypeOfFlower;
     [SerializeField] private Sprite FlowerImage;
+    [SerializeField] private Tile FlowerTile;
 
     public override ItemData ItemPickedUp() 
     {
-        ItemData flowerData = new ItemData(FlowerName, FlowerDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, TypeOfFlower);
+        ItemData flowerData = new ItemData(FlowerName, FlowerDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, FlowerTile, TypeOfFlower);
         return flowerData;
     }
 

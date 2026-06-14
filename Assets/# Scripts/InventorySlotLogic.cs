@@ -1,16 +1,32 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    // Private 
     private Vector2 mousePos;
+    [SerializeField] private InventoryUI inventoryUI;
+    [SerializeField] int InventoryIndex;
+
+    // Properties
+    public Vector2 MousePos { get { return mousePos; } }
+
+    // For Snapping back to original pos.
     private Vector3 originalPos;
     private Transform originalParent;
 
+    // For always being ontop of other slots
+    private Transform parentDuringDrag;
+
+    // Flags
+    private bool isDragging;
+
+
     private void Awake()
     {
-        originalPos = GetComponent<RectTransform>().localPosition;
+        originalPos = GetComponent<RectTransform>().position;
         originalParent = GetComponent<RectTransform>().parent;
     }
 
@@ -23,19 +39,34 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
+
+        if(GetComponent<Image>().sprite == null) { return; }
+
+        isDragging = true;
+        transform.SetParent(transform.root);
+        transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("Dragging");
-        transform.position = mousePos;
+        if (isDragging) 
+        {
+            Debug.Log("Dragging");
+            transform.position = mousePos;
+        }
+        
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-       Debug.Log("Stop Drag");
-       GetComponent<RectTransform>().localPosition = originalPos;
-       GetComponent<RectTransform>().SetParent(originalParent);
+        if (isDragging)
+        {
+            Debug.Log("Stop Drag");
+            inventoryUI.RemoveItem(InventoryIndex);
+            GetComponent<RectTransform>().position = originalPos;
+            GetComponent<RectTransform>().SetParent(originalParent);
+        }
+            
     }
 
     public void OnPointerEnter(PointerEventData eventData)

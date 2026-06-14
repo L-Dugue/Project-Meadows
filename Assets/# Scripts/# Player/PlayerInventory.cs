@@ -4,6 +4,8 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -17,6 +19,10 @@ public class PlayerInventory : MonoBehaviour
     // Private Members
     private bool isInventoryFull = false;
     private bool isInventoryIsEmpty = true;
+
+    [Header("TileSet Settings")]
+    // Serialized Fields
+    [SerializeField] private Tilemap worldTileMap;
 
 
 
@@ -58,26 +64,13 @@ public class PlayerInventory : MonoBehaviour
     }
 
 
-    public void RemoveItemFromInventory(int index)
+    public void RemoveItemFromInventory(int index, Vector2 mousePos)
     {
         if (isInventoryIsEmpty) { return; }
 
         var typeOfItem = _items[index]?._ItemDataType;
-        GameObject removedItemObj = new GameObject(_items[index]?._Name, typeOfItem.GetType());
-
-        // Applying position
-        removedItemObj.transform.position = gameObject.transform.position;
-
-        // Adding of Sprite Renderer
-        removedItemObj.AddComponent<SpriteRenderer>();
-        removedItemObj.GetComponent<SpriteRenderer>().sprite = _items[index]?._ImageSprite;
-
-        // Adding of Collider
-        removedItemObj.AddComponent<CircleCollider2D>().isTrigger = true;
-        removedItemObj.GetComponent<CircleCollider2D>().radius = 0.17f;
-
-        // Configuration of Item Details
-        removedItemObj.GetComponent<Item>().ApplyDetailsToItem(_items?[index]);
+        //GameObject removedItemObj = new GameObject(_items[index]?._Name, typeOfItem.GetType());
+        PlacingFlowerOnTileMap(_items[index]?._ItemTile, mousePos);
 
         // Remove Item from Inventory Array
         _items[index] = null;
@@ -86,6 +79,9 @@ public class PlayerInventory : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// DEPRECATED!
+    /// </summary>
     public void PrintOutContentsOfInventoryDEBUGGING() 
     {
         for (int index = 0; index < _items.Length; index++)
@@ -95,4 +91,12 @@ public class PlayerInventory : MonoBehaviour
         }
     }
    
+
+    private void PlacingFlowerOnTileMap(Tile itemTile, Vector2 mousePos) 
+    {
+        Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
+        Vector3Int cellPos = worldTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
+        worldTileMap.SetTile(cellPos, itemTile); // Puts the item on that grid
+    }
+
 }

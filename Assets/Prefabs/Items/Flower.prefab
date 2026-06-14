@@ -145,3 +145,4 @@ MonoBehaviour:
   FlowerDesc: Just a Generic Flower... Nothing special
   TypeOfFlower: Generic
   FlowerImage: {fileID: 0}
+  FlowerTile: {fileID: 11400000, guid: 671aa1396bce9824a88b4094316b376e, type: 2}

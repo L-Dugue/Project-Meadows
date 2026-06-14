@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Player : Character
 {
+    
+
     void FixedUpdate()
     {
         MoveCharacter();

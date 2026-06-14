@@ -7,7 +7,7 @@ public class InventoryUI : MonoBehaviour
 
 
     // Events
-    public delegate void InventoryRemoveItem(int index);
+    public delegate void InventoryRemoveItem(int index, Vector2 mousePos);
     public static event InventoryRemoveItem RemoveItemFromInventory;
 
     // Private Fields
@@ -34,9 +34,10 @@ public class InventoryUI : MonoBehaviour
     {
         if (itemDatas[index] != null) 
         {
+            Debug.Log("RAN!");
             inventoryImagesPanels[index].sprite = defaultSprite;
             itemDatas[index] = null;
-            RemoveItemFromInventory?.Invoke(index);
+            RemoveItemFromInventory?.Invoke(index, inventoryImagesPanels[index].GetComponent<InventorySlotLogic>().MousePos);
         }
        
     }
