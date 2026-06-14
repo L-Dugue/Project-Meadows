@@ -65,6 +65,7 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
             inventoryUI.RemoveItem(InventoryIndex);
             GetComponent<RectTransform>().position = originalPos;
             GetComponent<RectTransform>().SetParent(originalParent);
+            isDragging = false;
         }
             
     }
