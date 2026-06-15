@@ -34,10 +34,9 @@ public class InventoryUI : MonoBehaviour
     {
         if (itemDatas[index] != null) 
         {
-            Debug.Log("RAN!");
             inventoryImagesPanels[index].sprite = defaultSprite;
             itemDatas[index] = null;
-            RemoveItemFromInventory?.Invoke(index, inventoryImagesPanels[index].GetComponent<InventorySlotLogic>().MousePos);
+            RemoveItemFromInventory?.Invoke(index, inventoryImagesPanels[index].GetComponent<InventorySlotLogic>().InventoryMousePos);
         }
        
     }

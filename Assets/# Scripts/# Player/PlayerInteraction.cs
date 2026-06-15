@@ -27,8 +27,6 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     RemoveItemFromTileSet(pickableItem.gameObject.transform.position);
                 }
-
-                Debug.Log("Performing pickup");
             }
         }
     }
@@ -46,7 +44,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private void RemoveItemFromTileSet(Vector3 posOfItem)
     {
-        Debug.Log("REMOVING FROM GRID!");
         Vector3Int cellPos = worldTileMap.WorldToCell(posOfItem);
         worldTileMap.SetTile(cellPos, null);
     }

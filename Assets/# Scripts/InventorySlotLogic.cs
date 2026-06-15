@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     // Private 
-    private Vector2 mousePos;
     [SerializeField] private InventoryUI inventoryUI;
     [SerializeField] int InventoryIndex;
-
-    // Properties
-    public Vector2 MousePos { get { return mousePos; } }
+    [SerializeField] Player player;
+    private Vector2 inventoryMousePos;
 
     // For Snapping back to original pos.
     private Vector3 originalPos;
@@ -23,6 +21,9 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
     // Flags
     private bool isDragging;
 
+    // Public Properties
+    public Vector2 InventoryMousePos { get { return inventoryMousePos; } set { inventoryMousePos = value; } }
+
 
     private void Awake()
     {
@@ -30,16 +31,8 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
         originalParent = GetComponent<RectTransform>().parent;
     }
 
-    public void OnUICursorPos(InputAction.CallbackContext context) 
-    {
-        mousePos = context.ReadValue<Vector2>();
-    }
-
-
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin Drag");
-
         if(GetComponent<Image>().sprite == null) { return; }
 
         isDragging = true;
@@ -51,23 +44,24 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
     {
         if (isDragging) 
         {
-            Debug.Log("Dragging");
-            transform.position = mousePos;
+            InventoryMousePos = player.MousePos;
+            transform.position = player.MousePos;
         }
         
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (isDragging)
+        // Checks to ensure that the item CAN be placed in the world before removing from Inventory.
+        if (isDragging && player.gameObject.GetComponent<PlayerInventory>().CheckIfPlaceable(InventoryIndex))
         {
-            Debug.Log("Stop Drag");
             inventoryUI.RemoveItem(InventoryIndex);
-            GetComponent<RectTransform>().position = originalPos;
-            GetComponent<RectTransform>().SetParent(originalParent);
-            isDragging = false;
         }
-            
+
+        GetComponent<RectTransform>().position = originalPos;
+        GetComponent<RectTransform>().SetParent(originalParent);
+        isDragging = false;
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)

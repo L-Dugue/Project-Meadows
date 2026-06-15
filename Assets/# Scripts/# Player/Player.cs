@@ -3,7 +3,11 @@ using UnityEngine.InputSystem;
 
 public class Player : Character
 {
-    
+    // Private Var
+    private Vector2 mousePos;
+
+    // Public Properties
+    public Vector2 MousePos { get { return mousePos; } }
 
     void FixedUpdate()
     {
@@ -23,6 +27,11 @@ public class Player : Character
             playerInteraction.PerformPickingUpItem();
         }
         
+    }
+
+    public void OnUICursorPos(InputAction.CallbackContext context)
+    {
+        mousePos = context.ReadValue<Vector2>();
     }
 
     public void OnPrintOutContentsDEBUGGING(InputAction.CallbackContext context)
