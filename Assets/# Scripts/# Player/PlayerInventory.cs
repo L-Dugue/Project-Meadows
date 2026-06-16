@@ -140,14 +140,27 @@ public class PlayerInventory : MonoBehaviour
         switch (_items[index]?._ItemDataType)
         {
             case Flower:
-                if (flowerPlaceableTiles.PlaceableTiles.Contains(tileMapWhichIsPlaceable.GetTile(cellPos)))
+                if (flowerPlaceableTiles.PlaceableTiles.Contains(tileMapWhichIsPlaceable.GetTile(cellPos)) && pickupTileMap.GetTile(cellPos) == null)
                 {
                     
                     return true;
 
                 }
+                else
+                {
+                    return false;
+                }
                 
-                return false;
+            case FlowerPot:
+                if(pickupTileMap.GetTile(cellPos) == null)
+                {
+                    Debug.Log("PLACING");
+                    return true;
+                }
+                else 
+                {
+                    return false;
+                }
 
             default: return false;
         }

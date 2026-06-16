@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2237998925404016046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4078631378046287530, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8949431825832941283, guid: 26bce40d213d36b469308a659c38d3e4, type: 3}
+    - target: {fileID: 4078631378046287530, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2531
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274569560593619098, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_Name
+      value: VoidFlower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: FlowerDesc
+      value: The locals here say they grow by the light of blackholes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: FlowerName
+      value: Void Flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: FlowerTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e6603cb609089746a341eda6ea9d184, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: TypeOfFlower
+      value: Rare
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}

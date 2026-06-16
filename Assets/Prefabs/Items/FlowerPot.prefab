@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7274569560593619098
+--- !u!1 &1816922137978323208
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6805642594498929080}
-  - component: {fileID: 4078631378046287530}
-  - component: {fileID: 7615385148751147182}
-  - component: {fileID: 8227155648762598532}
+  - component: {fileID: 3024349939863469470}
+  - component: {fileID: 258807035747259227}
+  - component: {fileID: 6607856906394264061}
+  - component: {fileID: 589877188835589368}
   m_Layer: 6
-  m_Name: Flower
+  m_Name: FlowerPot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6805642594498929080
+--- !u!4 &3024349939863469470
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274569560593619098}
+  m_GameObject: {fileID: 1816922137978323208}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -34,14 +34,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4078631378046287530
+--- !u!212 &258807035747259227
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274569560593619098}
+  m_GameObject: {fileID: 1816922137978323208}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,23 +83,23 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 8922592921380583224, guid: a7dcaf766173e4a4ba6c4f163663767e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &7615385148751147182
+--- !u!58 &6607856906394264061
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274569560593619098}
+  m_GameObject: {fileID: 1816922137978323208}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -127,22 +127,20 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.17662072}
-  m_Radius: 0.32855314
---- !u!114 &8227155648762598532
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.3285531
+--- !u!114 &589877188835589368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274569560593619098}
+  m_GameObject: {fileID: 1816922137978323208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07d600495f4b6f2469b5f50f97496457, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b4adf03452ef444fa38dfbf1b93c758, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FlowerActual
-  FlowerName: Generic Flower
-  FlowerDesc: Just a Generic Flower... Nothing special
-  TypeOfFlower: Generic
-  FlowerImage: {fileID: 0}
-  FlowerTile: {fileID: 11400000, guid: 671aa1396bce9824a88b4094316b376e, type: 2}
+  m_EditorClassIdentifier: '::'
+  FlowerPotName: Generic Flower Pot
+  FlowerPotDesc: Just a pot.
+  FlowerPotTile: {fileID: 11400000, guid: f495f6fb0417f0b4c89f9959bea60143, type: 2}

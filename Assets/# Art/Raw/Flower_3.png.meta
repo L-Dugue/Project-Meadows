@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 16b2b35531584be439c2b7392b6f7cc1
+guid: 26bce40d213d36b469308a659c38d3e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3072838674319197481
-    second: 5244796fec46e7e8c6759fc6eb34024b_0
+      213: 8949431825832941283
+    second: Flower_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 5244796fec46e7e8c6759fc6eb34024b_0
+      name: Flower_3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 736
-        height: 650
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7da3f1d91851b55d0800000000000000
-      internalID: -3072838674319197481
+      spriteID: 3e6195854d4c23c70800000000000000
+      internalID: 8949431825832941283
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7a3b12b12f863d34da9fb7b6a3481343
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      5244796fec46e7e8c6759fc6eb34024b_0: -3072838674319197481
+      Flower_3_0: 8949431825832941283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
