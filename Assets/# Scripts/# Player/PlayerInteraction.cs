@@ -23,7 +23,7 @@ public class PlayerInteraction : MonoBehaviour
             if(contact.TryGetComponent<Item>(out Item pickableItem)) 
             {
                 // Checks to see if Adding the Item to the Inventory worked
-                if (_inventory.AddItemToInventory(pickableItem.ItemPickedUp()))
+                if (_inventory.AddItemToInventory(pickableItem.ReturnItemData()))
                 {
                     RemoveItemFromTileSet(pickableItem.gameObject.transform.position);
                 }

@@ -9,11 +9,12 @@ public class Flower : Item
     //[SerializeField] private Sprite FlowerImage;
     [SerializeField] private Tile FlowerTile;
 
-    public override ItemData ItemPickedUp() 
+    public override ItemData ReturnItemData() 
     {
         ItemData flowerData = new ItemData(FlowerName, FlowerDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, FlowerTile, TypeOfFlower);
         return flowerData;
     }
+
 
     //public override void ApplyDetailsToItem(ItemData? itemData)
     //{
