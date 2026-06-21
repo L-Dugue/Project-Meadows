@@ -1,5 +1,8 @@
+// Socket smells
+
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 
 public class Player : Character
 {
@@ -24,7 +27,8 @@ public class Player : Character
     {
         if (context.started) 
         {
-            playerInteraction.PerformPickingUpItem();
+            playerInteraction.Interact();
+            
         }
         
     }
@@ -34,14 +38,7 @@ public class Player : Character
         mousePos = context.ReadValue<Vector2>();
     }
 
-    public void OnPrintOutContentsDEBUGGING(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            playerInteraction.DEBUGGER();
-        }
-
-    }
+   
 
     public override void MoveCharacter()
     {

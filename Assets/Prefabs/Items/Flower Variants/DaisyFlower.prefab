@@ -57,6 +57,10 @@ PrefabInstance:
       value: DaisyFlower
       objectReference: {fileID: 0}
     - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+      propertyPath: ItemPrice
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: FlowerDesc
       value: Daisies are wonderful flowers.
       objectReference: {fileID: 0}

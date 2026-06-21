@@ -6,12 +6,12 @@ public class Flower : Item
     [SerializeField] private string FlowerName;
     [SerializeField] private string FlowerDesc;
     [SerializeField] private string TypeOfFlower;
-    //[SerializeField] private Sprite FlowerImage;
+    [SerializeField] private int ItemPrice;
     [SerializeField] private Tile FlowerTile;
 
     public override ItemData ReturnItemData() 
     {
-        ItemData flowerData = new ItemData(FlowerName, FlowerDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, FlowerTile, TypeOfFlower);
+        ItemData flowerData = new ItemData(FlowerName, FlowerDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, FlowerTile, TypeOfFlower, ItemPrice);
         return flowerData;
     }
 

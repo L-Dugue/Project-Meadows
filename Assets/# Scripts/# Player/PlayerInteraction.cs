@@ -14,26 +14,31 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private Tilemap worldTileMap;
 
 
-    public void PerformPickingUpItem()
+    
+
+    public void Interact()
     {
         Collider2D contact = Physics2D.OverlapCircle(transform.position, _interactionRange, _interactableLayer);
 
         if(contact != null) 
         {
+            // Interact with item
             if(contact.TryGetComponent<Item>(out Item pickableItem)) 
             {
                 // Checks to see if Adding the Item to the Inventory worked
                 if (_inventory.AddItemToInventory(pickableItem.ReturnItemData()))
                 {
                     RemoveItemFromTileSet(pickableItem.gameObject.transform.position);
+                    return;
                 }
             }
-        }
-    }
 
-    public void DEBUGGER()
-    {
-        _inventory.PrintOutContentsOfInventoryDEBUGGING();
+            if(contact.transform.parent.TryGetComponent<MarketInteraction>(out MarketInteraction market))
+            {
+                market.EnterMarket();
+                return;
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()

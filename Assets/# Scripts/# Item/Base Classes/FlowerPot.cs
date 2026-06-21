@@ -5,11 +5,14 @@ public class FlowerPot : Item
 {
     [SerializeField] private string FlowerPotName;
     [SerializeField] private string FlowerPotDesc;
+    [SerializeField] private string ItemRarity;
+    [SerializeField] private int FlowerPotPrice;
     [SerializeField] private Tile FlowerPotTile;
+
 
     public override ItemData ReturnItemData()
     {
-        ItemData flowerData = new ItemData(FlowerPotName, FlowerPotDesc, this, FlowerPotTile, gameObject.GetComponent<SpriteRenderer>().sprite);
-        return flowerData;
+        ItemData itemData = new ItemData(FlowerPotName, FlowerPotDesc, GetComponent<SpriteRenderer>().sprite, this, FlowerPotTile, ItemRarity, FlowerPotPrice);
+        return itemData;
     }
 }

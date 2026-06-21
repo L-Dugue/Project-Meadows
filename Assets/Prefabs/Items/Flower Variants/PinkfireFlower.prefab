@@ -53,6 +53,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7863920825340942634, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
+      propertyPath: ItemPrice
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863920825340942634, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
       propertyPath: FlowerDesc
       value: Some say it has healing properties!
       objectReference: {fileID: 0}

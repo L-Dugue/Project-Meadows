@@ -58,7 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7274569560593619098, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: m_Name
-      value: Flower Variant
+      value: PurpleFlower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemPrice
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: FlowerDesc

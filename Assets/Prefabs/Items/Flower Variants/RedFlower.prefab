@@ -61,6 +61,10 @@ PrefabInstance:
       value: RedFlower
       objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemPrice
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: FlowerDesc
       value: Maybe it has fire properties?
       objectReference: {fileID: 0}

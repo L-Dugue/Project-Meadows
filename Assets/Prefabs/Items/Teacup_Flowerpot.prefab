@@ -13,6 +13,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8223813848969812781, guid: 72333c72c2caf6e42a34545c15d85212, type: 3}
     - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
+      propertyPath: ItemRarity
+      value: Legendary
+      objectReference: {fileID: 0}
+    - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
       propertyPath: FlowerPotDesc
       value: Some people grow flowers in these?
       objectReference: {fileID: 0}
@@ -24,9 +28,13 @@ PrefabInstance:
       propertyPath: FlowerPotTile
       value: 
       objectReference: {fileID: 11400000, guid: a29025145f760504bac721df278fa309, type: 2}
+    - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
+      propertyPath: FlowerPotPrice
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1816922137978323208, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
       propertyPath: m_Name
-      value: FlowerPot Variant
+      value: Teacup_Flowerpot
       objectReference: {fileID: 0}
     - target: {fileID: 3024349939863469470, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
       propertyPath: m_LocalPosition.x

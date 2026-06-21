@@ -93,7 +93,7 @@ public class PlayerInventory : MonoBehaviour
         for (int index = 0; index < _items.Length; index++)
         {
             if (_items[index] == null) { continue; }
-            Debug.Log($"Name: {_items[index]?._Name}, Desc: {_items[index]?._Description}, Type Of Flower: {_items[index]?._FlowerType}");
+            Debug.Log($"Name: {_items[index]?._Name}, Desc: {_items[index]?._Description}, Type Of Flower: {_items[index]?._ItemRarity}");
         }
     }
 
