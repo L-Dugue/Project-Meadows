@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
-public class FlowerPot : Item
+public class FlowerInFlowerPot : Item
 {
     public override ItemData ReturnItemData()
     {

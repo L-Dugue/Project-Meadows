@@ -13025,6 +13025,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 290443688}
     - target: {fileID: 6895272199358497481, guid: b91cd684b2751de44bb31e51348ad185, type: 3}
+      propertyPath: flowerPotTiles
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d5c79b9529e6e04fb6347d37341cb1d, type: 2}
+    - target: {fileID: 6895272199358497481, guid: b91cd684b2751de44bb31e51348ad185, type: 3}
       propertyPath: placementRange
       value: 2.5
       objectReference: {fileID: 0}

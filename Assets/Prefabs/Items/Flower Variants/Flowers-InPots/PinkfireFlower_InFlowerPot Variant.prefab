@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &401635556039650018
+--- !u!1001 &1952693496498690863
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,14 +11,14 @@ PrefabInstance:
     - target: {fileID: 3923281848106650071, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8627884183443795181, guid: d30916d8a68288a41b0f776a6b5031ab, type: 3}
+      objectReference: {fileID: 6712541994659015493, guid: 8e6245b7df335a24a9d31d37920d688d, type: 3}
     - target: {fileID: 5807961596516308677, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 338.13147
+      value: 1.99026
       objectReference: {fileID: 0}
     - target: {fileID: 5807961596516308677, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 675.41406
+      value: 0.58151
       objectReference: {fileID: 0}
     - target: {fileID: 5807961596516308677, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54,50 +54,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_Name
-      value: DaisyFlower
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: ItemDesc
-      value: Very common around these parts.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: ItemName
-      value: Daisy
+      value: PinkfireFlower_InFlowerPot Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: ItemTile
       value: 
-      objectReference: {fileID: 11400000, guid: 7c9251c7554e88048978aa318c9e8519, type: 2}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: ItemPrice
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: FlowerDesc
-      value: Daisies are wonderful flowers.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: FlowerName
-      value: Daisy
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
     - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: FlowerTile
       value: 
-      objectReference: {fileID: 11400000, guid: 7c9251c7554e88048978aa318c9e8519, type: 2}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: ItemRarity
-      value: Common
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: TypeOfFlower
-      value: Generic
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: _flowerInFlowerPot
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+      objectReference: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
+    m_RemovedComponents:
+    - {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -337947941933662375}
   m_SourcePrefab: {fileID: 100100000, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+--- !u!1 &8144007549484479688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+  m_PrefabInstance: {fileID: 1952693496498690863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-337947941933662375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8144007549484479688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  ItemName: PinkFire Flower
+  ItemDesc: The locals say they have special healing properties. It has a tendency
+    to make the pots very hot.
+  ItemRarity: Legendary
+  ItemPrice: 45
+  ItemTile: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}

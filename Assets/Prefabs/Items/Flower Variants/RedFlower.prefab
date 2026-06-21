@@ -61,8 +61,20 @@ PrefabInstance:
       value: RedFlower
       objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemDesc
+      value: Very common, a cousin of the rare PinkFire Flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemName
+      value: RedFire Flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 804f788ca8cf71247ae948603518a410, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: ItemPrice
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: FlowerDesc
@@ -76,6 +88,14 @@ PrefabInstance:
       propertyPath: FlowerTile
       value: 
       objectReference: {fileID: 11400000, guid: 804f788ca8cf71247ae948603518a410, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemRarity
+      value: Common
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _flowerInFlowerPot
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f7e837ee54773a44b499baa36580694, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

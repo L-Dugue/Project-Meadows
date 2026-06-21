@@ -29,7 +29,7 @@ public class PlayerInventory : MonoBehaviour
 
     [Header("Placeable Tiles Lists")]
     [SerializeField] private PlaceableTilesList flowerPlaceableTiles;
-
+    [SerializeField] private PlaceableTilesList flowerPotTiles;
 
 
     private void Awake()
@@ -74,12 +74,28 @@ public class PlayerInventory : MonoBehaviour
         // Mouse is outside placement range and is a valid tile.
         if (IsOnValidPlaceableTile(index) && IsMouseInPlacementRange())
         {
+            Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
+            Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace);
             var typeOfItem = _items[index]?._ItemDataType;
-            PlacingFlowerOnTileMap(_items[index]?._ItemTile, mousePos);
 
-            // Remove Item from Inventory Array
-            _items[index] = null;
-            isInventoryFull = _items.All(i => i != null);
+            if ( (typeOfItem is Flower flower) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
+            {
+                PlacingFlowerOnTileMap(flower.FlowerInFlowerPot, mousePos);
+
+                // Remove Item from Inventory Array
+                _items[index] = null;
+                isInventoryFull = _items.All(i => i != null);
+            }
+            else if (pickupTileMap.GetTile(cellPos) == null)
+            {
+                PlacingFlowerOnTileMap(_items[index]?._ItemTile, mousePos);
+
+                // Remove Item from Inventory Array
+                _items[index] = null;
+                isInventoryFull = _items.All(i => i != null);
+            }
+
+            
         } 
     }
 
@@ -140,17 +156,16 @@ public class PlayerInventory : MonoBehaviour
         switch (_items[index]?._ItemDataType)
         {
             case Flower:
-                if (flowerPlaceableTiles.PlaceableTiles.Contains(tileMapWhichIsPlaceable.GetTile(cellPos)) && pickupTileMap.GetTile(cellPos) == null)
+                if (flowerPlaceableTiles.PlaceableTiles.Contains(tileMapWhichIsPlaceable.GetTile(cellPos)))
                 {
-                    
                     return true;
-
                 }
                 else
                 {
                     return false;
                 }
-                
+
+            case FlowerInFlowerPot:
             case FlowerPot:
                 if(pickupTileMap.GetTile(cellPos) == null)
                 {
@@ -162,6 +177,7 @@ public class PlayerInventory : MonoBehaviour
                     return false;
                 }
 
+            
             default: return false;
         }
 

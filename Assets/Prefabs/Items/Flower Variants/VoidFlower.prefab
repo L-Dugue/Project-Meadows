@@ -61,6 +61,19 @@ PrefabInstance:
       value: VoidFlower
       objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemDesc
+      value: These flowers only show their true colors when under the light of a
+        black hole.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemName
+      value: Void Flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e6603cb609089746a341eda6ea9d184, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: ItemPrice
       value: 20
       objectReference: {fileID: 0}
@@ -77,9 +90,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7e6603cb609089746a341eda6ea9d184, type: 2}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: ItemRarity
+      value: Uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: TypeOfFlower
       value: Rare
       objectReference: {fileID: 0}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _flowerInFlowerPot
+      value: 
+      objectReference: {fileID: 11400000, guid: c63a873b84456e24dba539baccea7159, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

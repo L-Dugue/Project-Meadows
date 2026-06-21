@@ -3,15 +3,14 @@ using UnityEngine.Tilemaps;
 
 public class Flower : Item
 {
-    [SerializeField] private string FlowerName;
-    [SerializeField] private string FlowerDesc;
-    [SerializeField] private string TypeOfFlower;
-    [SerializeField] private int ItemPrice;
-    [SerializeField] private Tile FlowerTile;
+    [Header("Variant of Flower In Pots")]
+    [SerializeField] private Tile _flowerInFlowerPot;
 
-    public override ItemData ReturnItemData() 
+    // Properties
+    public Tile FlowerInFlowerPot { get { return _flowerInFlowerPot;  }   }
+    public override ItemData ReturnItemData()
     {
-        ItemData flowerData = new ItemData(FlowerName, FlowerDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, FlowerTile, TypeOfFlower, ItemPrice);
+        ItemData flowerData = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemTile, base.ItemRarity, base.ItemPrice);
         return flowerData;
     }
 
@@ -20,7 +19,7 @@ public class Flower : Item
     //{
     //    // Applying scale for debugging
     //    gameObject.transform.localScale = new Vector3(0.08f, 0.08f, 1);
-       
+
     //    // Loading Values from ItemData
     //    FlowerName = itemData?._Name;
     //    FlowerDesc = itemData?._Description;
