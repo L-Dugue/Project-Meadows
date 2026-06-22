@@ -18,6 +18,14 @@ public class MarketInteraction : MonoBehaviour
     /// </summary>
     public void ExitMarket() 
     {
-        UIBuy.SetActive(false);
-    }
+        if (UIBuy.activeSelf)
+        {
+            UIBuy.SetActive(false);
+        }
+        else if (UISell.activeSelf)
+        {
+            UISell.SetActive(false);
+        }
+
+}
 }
