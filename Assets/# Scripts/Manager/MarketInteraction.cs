@@ -13,6 +13,12 @@ public class MarketInteraction : MonoBehaviour
         UIBuy.SetActive(true);
     }
 
+    public void EnterSellMarketDEBUG()
+    {
+        Debug.Log("RAN");
+        UISell.SetActive(true);
+    }
+
     /// <summary>
     /// Will exit the Market, for now will only toggle the Buy Menu.
     /// </summary>
