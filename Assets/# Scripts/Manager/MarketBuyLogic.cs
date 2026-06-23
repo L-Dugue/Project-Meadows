@@ -12,16 +12,16 @@ public class MarketBuyLogic : MonoBehaviour
 
     public void SpawnBoughtItem() 
     {
-        if(marketSelectItemsLogic.CurrentlySelectedItem._ItemTile != null) 
+        if(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemTile != null) 
         {
             foreach(Transform itemSlot in boughtItemSlots) 
             { 
                 Vector3Int cellPos = tileMapWhichIsPlaceable.WorldToCell(itemSlot.position); 
                 
-                if(tileMapWhichIsPlaceable.GetTile(cellPos) == null && (player.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItem._ItemPrice) >= 0)
+                if(tileMapWhichIsPlaceable.GetTile(cellPos) == null && (player.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice) >= 0)
                 {
-                    tileMapWhichIsPlaceable.SetTile(cellPos, marketSelectItemsLogic.CurrentlySelectedItem._ItemTile);
-                    player.UpdatePlayerGems(marketSelectItemsLogic.CurrentlySelectedItem._ItemPrice);
+                    tileMapWhichIsPlaceable.SetTile(cellPos, marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemTile);
+                    player.UpdatePlayerGems(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice);
                     return;
                 }
             }

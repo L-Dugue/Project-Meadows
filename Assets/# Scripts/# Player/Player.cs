@@ -24,6 +24,7 @@ public class Player : Character
     {
         MoveCharacter();
         FlipSprite(moveInput.x);
+        Debug.Log(playerGems);
     }
 
     public void OnMove(InputAction.CallbackContext context) 

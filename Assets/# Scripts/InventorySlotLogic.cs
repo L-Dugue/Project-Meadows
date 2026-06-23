@@ -73,4 +73,6 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
     {
         Debug.Log("Stopped Hovering");
     }
+
+    
 }

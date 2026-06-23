@@ -22,18 +22,19 @@ public class MarketSelectItemsLogic : MonoBehaviour
 
     // Private Variables
     private Dictionary<Image, Item> itemsInStock = new Dictionary<Image, Item>();
-    private ItemData currentlySelectedItem;
-    private ItemData selectedItemInSell;
+    private ItemData currentlySelectedItemInBuy;
+    private ItemData currentlySelectedItemInSell;
 
     // Public Properties
-    public ItemData CurrentlySelectedItem {  get { return currentlySelectedItem; } }
+    public ItemData CurrentlySelectedItemInBuy {  get { return currentlySelectedItemInBuy; } }
+    public ItemData CurrentlySelectedItemInSell { get { return currentlySelectedItemInSell; } }
 
 
     public void OnMarketItemSelectedInBuy(Image itemSlotSelected) 
     {
         itemsInStock = stockedItems.ItemsInStock();
         DisplayItemDetails(itemsInStock[itemSlotSelected].ReturnItemData());
-        currentlySelectedItem = itemsInStock[itemSlotSelected].ReturnItemData();
+        currentlySelectedItemInBuy = itemsInStock[itemSlotSelected].ReturnItemData();
     }
 
     public void OnMarketItemselectedInSell(Image itemSlotSelected) 
@@ -43,12 +44,12 @@ public class MarketSelectItemsLogic : MonoBehaviour
         {
             if(item.ReturnItemData()._ImageSprite == itemSlotSelected.sprite)
             {
-                selectedItemInSell = item.ReturnItemData();
+                currentlySelectedItemInSell = item.ReturnItemData();
                 break;
             }
         }
 
-        DisplayItemDetails(selectedItemInSell);
+        DisplayItemDetails(currentlySelectedItemInSell);
     }
 
     private void DisplayItemDetails(ItemData itemData) 

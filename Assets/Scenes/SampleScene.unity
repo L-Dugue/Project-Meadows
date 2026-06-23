@@ -5510,6 +5510,7 @@ GameObject:
   - component: {fileID: 943827794}
   - component: {fileID: 943827795}
   - component: {fileID: 943827796}
+  - component: {fileID: 943827797}
   m_Layer: 0
   m_Name: Placeholder_Market
   m_TagString: Untagged
@@ -5673,6 +5674,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0110855, y: 1.9812365}
   m_EdgeRadius: 0
+--- !u!114 &943827797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943827790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39698e7fe59c9b84181bad963c9ea146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  m_ItemsSelectLogic: {fileID: 943827794}
+  m_playerInventory: {fileID: 2039900232}
+  m_player: {fileID: 1125368730}
+  m_InventoryUI: {fileID: 1420607469}
+  OnItemSold:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &947426598
 GameObject:
   m_ObjectHideFlags: 0
@@ -5969,7 +5989,7 @@ GameObject:
   - component: {fileID: 958097040}
   - component: {fileID: 958097039}
   m_Layer: 5
-  m_Name: Item_Buy
+  m_Name: Item_Sell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6038,7 +6058,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 958097040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 943827797}
+        m_TargetAssemblyTypeName: MarketSellLogic, Assembly-CSharp
+        m_MethodName: SellItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &958097040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19057,6 +19089,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8009503438201823443, guid: b91cd684b2751de44bb31e51348ad185, type: 3}
   m_PrefabInstance: {fileID: 6929867379871183581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2039900232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6895272199358497481, guid: b91cd684b2751de44bb31e51348ad185, type: 3}
+  m_PrefabInstance: {fileID: 6929867379871183581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eac94a85ad09754fa8d8d9330565949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
 --- !u!1 &2048999395
 GameObject:
   m_ObjectHideFlags: 0

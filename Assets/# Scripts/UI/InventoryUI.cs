@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,5 +40,37 @@ public class InventoryUI : MonoBehaviour
             RemoveItemFromInventory?.Invoke(index, inventoryImagesPanels[index].GetComponent<InventorySlotLogic>().InventoryMousePos);
         }
        
+    }
+
+    public void RemoveItem(ItemData item)
+    {
+        int panelToMakeDefaultIndex = 0;
+
+       for(int i = 0; i < inventoryImagesPanels.Length; i++)
+       {
+            if(inventoryImagesPanels[i].sprite == item._ImageSprite)
+            {
+                panelToMakeDefaultIndex = i;
+                break;
+            }
+       }
+
+        foreach (ItemData? itemData in itemDatas)
+        {
+            if (itemData != null && (itemData?._Name == item._Name))
+            {
+                inventoryImagesPanels[panelToMakeDefaultIndex].sprite = defaultSprite;
+                itemDatas[Array.IndexOf(itemDatas, itemData)] = null;
+                break;
+            }
+        }
+
+        //if (itemDatas[index] != null)
+        //{
+        //    inventoryImagesPanels[index].sprite = defaultSprite;
+        //    itemDatas[index] = null;
+        //    RemoveItemFromInventory?.Invoke(index, inventoryImagesPanels[index].GetComponent<InventorySlotLogic>().InventoryMousePos);
+        //}
+
     }
 }

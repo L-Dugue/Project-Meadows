@@ -31,6 +31,9 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private PlaceableTilesList flowerPlaceableTiles;
     [SerializeField] private PlaceableTilesList flowerPotTiles;
 
+    // Public Properties
+    public ItemData?[] Items {  get { return _items; } }
+
 
     private void Awake()
     {
@@ -66,7 +69,11 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
-
+    /// <summary>
+    /// Remove Item from Inventory, placing it on the ground.
+    /// </summary>
+    /// <param name="index"></param>
+    /// <param name="mousePos"></param>
     public void RemoveItemFromInventory(int index, Vector2 mousePos)
     {
         if (isInventoryIsEmpty) { return; } // Does nothing if Inventory is empty.
@@ -80,6 +87,8 @@ public class PlayerInventory : MonoBehaviour
 
             if ( (typeOfItem is Flower flower) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
             {
+
+                Debug.Log(_items[index]?._ItemDataType);
                 PlacingFlowerOnTileMap(flower.FlowerInFlowerPot, mousePos);
 
                 // Remove Item from Inventory Array
@@ -99,12 +108,36 @@ public class PlayerInventory : MonoBehaviour
         } 
     }
 
-    //
-
     /// <summary>
-    /// DEPRECATED!
+    /// Remove a specific Item from Inventory, ignores the index of said item, doesn't place it on the ground.
     /// </summary>
-    public void PrintOutContentsOfInventoryDEBUGGING() 
+    /// <param name="index"></param>
+    public bool RemoveItemFromInventory(ItemData item) 
+    {
+        if (isInventoryIsEmpty) { return false; } // Does nothing if Inventory is empty.
+
+        // Remove Item from Inventory Array
+        foreach (var itemData in _items) 
+        {
+
+            if (itemData != null && (itemData?._Name == item._Name)) 
+            {
+                _items[Array.IndexOf(_items, itemData)] = null;
+                isInventoryFull = _items.All(i => i != null);
+                Debug.Log("Removed item!");
+                return true; // Item Removed
+            }
+        }
+
+        return false;
+    }
+
+
+
+/// <summary>
+/// DEPRECATED!
+/// </summary>
+public void PrintOutContentsOfInventoryDEBUGGING() 
     {
         for (int index = 0; index < _items.Length; index++)
         {
