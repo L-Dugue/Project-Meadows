@@ -8,7 +8,7 @@ public class MarketBuyLogic : MonoBehaviour
     [SerializeField] MarketSelectItemsLogic marketSelectItemsLogic;
     [SerializeField] Transform[] boughtItemSlots;
     [SerializeField] private Tilemap tileMapWhichIsPlaceable;
-    [SerializeField] private Player player;
+    [SerializeField] private PlayerCurrency playerCurrency;
 
     public void SpawnBoughtItem() 
     {
@@ -18,10 +18,10 @@ public class MarketBuyLogic : MonoBehaviour
             { 
                 Vector3Int cellPos = tileMapWhichIsPlaceable.WorldToCell(itemSlot.position); 
                 
-                if(tileMapWhichIsPlaceable.GetTile(cellPos) == null && (player.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice) >= 0)
+                if(tileMapWhichIsPlaceable.GetTile(cellPos) == null && (playerCurrency.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice) >= 0)
                 {
                     tileMapWhichIsPlaceable.SetTile(cellPos, marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemTile);
-                    player.UpdatePlayerGems(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice);
+                    playerCurrency.BuyItem(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice);
                     return;
                 }
             }

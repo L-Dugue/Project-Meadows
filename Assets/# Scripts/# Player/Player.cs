@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Player : Character
 {
-    // Serialized Fields
-    [SerializeField] private int playerGems;
+   
 
     // Private Var
     private Vector2 mousePos;
@@ -18,13 +17,12 @@ public class Player : Character
 
     // Public Properties
     public Vector2 MousePos { get { return mousePos; } }
-    public int PlayerGems { get { return playerGems; } set { playerGems = Mathf.Clamp(value, 0, _maxGems);  } }
+    
 
     void FixedUpdate()
     {
         MoveCharacter();
         FlipSprite(moveInput.x);
-        Debug.Log(playerGems);
     }
 
     public void OnMove(InputAction.CallbackContext context) 
@@ -61,11 +59,5 @@ public class Player : Character
     {
         moveInput = moveInput.normalized;
         rigidBody.linearVelocity = new Vector2(moveInput.x * Speed, moveInput.y * Speed);
-    }
-
-    public void UpdatePlayerGems(int amount)
-    { 
-        playerGems -= amount;
-        Debug.Log(PlayerGems);
     }
 }

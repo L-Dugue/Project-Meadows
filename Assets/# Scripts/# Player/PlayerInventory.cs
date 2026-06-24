@@ -126,7 +126,6 @@ public class PlayerInventory : MonoBehaviour
         // Remove Item from Inventory Array
         foreach (var itemData in _items) 
         {
-
             if (itemData != null && (itemData?._Name == item._Name)) 
             {
                 _items[Array.IndexOf(_items, itemData)] = null;
