@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8872750469662446563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3738173941584913205, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -474190721472761767, guid: 26a3093dcd8f1404e8de32d6273e2b4d, type: 3}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 608.595
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 767.7105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127397044641332263, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038620482573092101, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      propertyPath: m_Name
+      value: DaisyFlower_Teacup Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8038620482573092101, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8998375391783998783}
+  m_SourcePrefab: {fileID: 100100000, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+--- !u!1 &1489773624416786150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8038620482573092101, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
+  m_PrefabInstance: {fileID: 8872750469662446563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8998375391783998783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489773624416786150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
+  ItemName: Daisy
+  ItemDesc: Very common around these parts.
+  ItemRarity: Common
+  ItemPrice: 10
+  ItemTile: {fileID: 11400000, guid: 4530fd8b4722c12498d4a28324cc0a02, type: 2}

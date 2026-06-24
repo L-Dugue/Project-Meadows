@@ -143,6 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ItemName: Flower Pot
   ItemDesc: A flower pot usually used around in the town.
-  ItemRarity: Rare
+  ItemRarity: Legendary
   ItemPrice: 15
   ItemTile: {fileID: 11400000, guid: f495f6fb0417f0b4c89f9959bea60143, type: 2}

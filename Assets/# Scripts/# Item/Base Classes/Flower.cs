@@ -5,9 +5,11 @@ public class Flower : Item
 {
     [Header("Variant of Flower In Pots")]
     [SerializeField] private Tile _flowerInFlowerPot;
+    [SerializeField] private Tile _flowerInTeaCup;
 
     // Properties
     public Tile FlowerInFlowerPot { get { return _flowerInFlowerPot;  }   }
+    public Tile FlowerInTeaCup { get { return _flowerInTeaCup; } }
     public override ItemData ReturnItemData()
     {
         ItemData flowerData = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemTile, base.ItemRarity, base.ItemPrice);

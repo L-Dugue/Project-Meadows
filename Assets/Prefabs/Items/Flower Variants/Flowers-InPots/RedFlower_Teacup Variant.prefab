@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8350943729602412082
+--- !u!1001 &8297204113489484882
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,23 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 518425078386731976, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
       propertyPath: m_Name
-      value: RedFlower_InFlowerPot Variant
+      value: RedFlower_Teacup Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 1290594501898774486, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
-      propertyPath: ItemTile
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f7e837ee54773a44b499baa36580694, type: 2}
-    - target: {fileID: 1290594501898774486, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
-      propertyPath: FlowerTile
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f7e837ee54773a44b499baa36580694, type: 2}
     - target: {fileID: 4447262045138064106, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.99026
+      value: 608.595
       objectReference: {fileID: 0}
     - target: {fileID: 4447262045138064106, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.58151
+      value: 767.7105
       objectReference: {fileID: 0}
     - target: {fileID: 4447262045138064106, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
       propertyPath: m_LocalPosition.z
@@ -63,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 6584142831212662264, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 253085628180005835, guid: ea467b3be507717408b94c2ed0961eb0, type: 3}
+      objectReference: {fileID: -8758238102714880993, guid: 6810f7df39101ef4d9cfb39eaa0e8801, type: 3}
     m_RemovedComponents:
     - {fileID: 1290594501898774486, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
     m_RemovedGameObjects: []
@@ -71,20 +63,20 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 518425078386731976, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4573624681839978947}
+      addedObject: {fileID: 2359904827398690115}
   m_SourcePrefab: {fileID: 100100000, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
---- !u!1 &8418727226993743354 stripped
+--- !u!1 &8364389516577240986 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 518425078386731976, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
-  m_PrefabInstance: {fileID: 8350943729602412082}
+  m_PrefabInstance: {fileID: 8297204113489484882}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-4573624681839978947
+--- !u!114 &2359904827398690115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8418727226993743354}
+  m_GameObject: {fileID: 8364389516577240986}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
@@ -93,5 +85,5 @@ MonoBehaviour:
   ItemName: RedFire Flower
   ItemDesc: Very common, a cousin of the rare PinkFire Flower
   ItemRarity: Common
-  ItemPrice: 10
-  ItemTile: {fileID: 11400000, guid: 8f7e837ee54773a44b499baa36580694, type: 2}
+  ItemPrice: 9
+  ItemTile: {fileID: 11400000, guid: 88bdaf7194ae41e47ad3f8d04d504d3f, type: 2}

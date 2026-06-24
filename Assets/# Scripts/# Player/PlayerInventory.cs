@@ -88,8 +88,15 @@ public class PlayerInventory : MonoBehaviour
             if ( (typeOfItem is Flower flower) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
             {
 
-                Debug.Log(_items[index]?._ItemDataType);
-                PlacingFlowerOnTileMap(flower.FlowerInFlowerPot, mousePos);
+                // Checks if its a teacup or ordinary flowerpot
+                if (flowerPotTiles.PlaceableTiles[0] == pickupTileMap.GetTile(cellPos))
+                {
+                    PlacingFlowerOnTileMap(flower.FlowerInFlowerPot, mousePos);
+                }
+                else if (flowerPotTiles.PlaceableTiles[1] == pickupTileMap.GetTile(cellPos))
+                {
+                    PlacingFlowerOnTileMap(flower.FlowerInTeaCup, mousePos);
+                }
 
                 // Remove Item from Inventory Array
                 _items[index] = null;
@@ -197,6 +204,7 @@ public void PrintOutContentsOfInventoryDEBUGGING()
                 {
                     return false;
                 }
+
 
             case FlowerInFlowerPot:
             case FlowerPot:

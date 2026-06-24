@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1952693496498690863
+--- !u!1001 &8156571373145674502
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,14 +11,14 @@ PrefabInstance:
     - target: {fileID: 3923281848106650071, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6712541994659015493, guid: 8e6245b7df335a24a9d31d37920d688d, type: 3}
+      objectReference: {fileID: -3771387093538769605, guid: 95f6a2751e31b3846a940e79712ebf93, type: 3}
     - target: {fileID: 5807961596516308677, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.99026
+      value: 608.595
       objectReference: {fileID: 0}
     - target: {fileID: 5807961596516308677, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.58151
+      value: 767.7105
       objectReference: {fileID: 0}
     - target: {fileID: 5807961596516308677, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54,16 +54,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_Name
-      value: PinkfireFlower_InFlowerPot Variant
+      value: PinkfireFlower_Teacup Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: ItemTile
-      value: 
-      objectReference: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
-    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-      propertyPath: FlowerTile
-      value: 
-      objectReference: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
     m_RemovedComponents:
     - {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
     m_RemovedGameObjects: []
@@ -71,28 +63,27 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -337947941933662375}
+      addedObject: {fileID: 1920364670448281664}
   m_SourcePrefab: {fileID: 100100000, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
---- !u!1 &8144007549484479688 stripped
+--- !u!1 &1958495908034116833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
-  m_PrefabInstance: {fileID: 1952693496498690863}
+  m_PrefabInstance: {fileID: 8156571373145674502}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-337947941933662375
+--- !u!114 &1920364670448281664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8144007549484479688}
+  m_GameObject: {fileID: 1958495908034116833}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
   ItemName: PinkFire Flower
-  ItemDesc: The locals say they have special healing properties. It has a tendency
-    to make the pots very hot.
+  ItemDesc: The locals say they have special healing properties.
   ItemRarity: Legendary
-  ItemPrice: 65
-  ItemTile: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
+  ItemPrice: 55
+  ItemTile: {fileID: 11400000, guid: 40f523e5a5f369548ab7089e4328b6af, type: 2}

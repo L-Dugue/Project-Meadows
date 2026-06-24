@@ -13,25 +13,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8223813848969812781, guid: 72333c72c2caf6e42a34545c15d85212, type: 3}
     - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
-      propertyPath: ItemRarity
-      value: Legendary
+      propertyPath: ItemDesc
+      value: An old tea cup, pretty hard to come across. People love to grow plants
+        within them!
       objectReference: {fileID: 0}
     - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
-      propertyPath: FlowerPotDesc
-      value: Some people grow flowers in these?
-      objectReference: {fileID: 0}
-    - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
-      propertyPath: FlowerPotName
+      propertyPath: ItemName
       value: Tea Cup
       objectReference: {fileID: 0}
     - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
-      propertyPath: FlowerPotTile
+      propertyPath: ItemTile
       value: 
       objectReference: {fileID: 11400000, guid: a29025145f760504bac721df278fa309, type: 2}
-    - target: {fileID: 589877188835589368, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
-      propertyPath: FlowerPotPrice
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 1816922137978323208, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
       propertyPath: m_Name
       value: Teacup_Flowerpot
