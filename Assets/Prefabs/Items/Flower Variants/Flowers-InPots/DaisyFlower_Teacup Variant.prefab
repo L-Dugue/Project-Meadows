@@ -56,7 +56,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: DaisyFlower_Teacup Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8743218320694069531, guid: 7fd4564f3a392d44d8580c33939ad774, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
