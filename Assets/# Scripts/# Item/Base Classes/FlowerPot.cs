@@ -8,4 +8,6 @@ public class FlowerPot : Item
         ItemData flowerpot = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemTile, base.ItemRarity, base.ItemPrice);
         return flowerpot;
     }
+
+
 }

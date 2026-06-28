@@ -91,20 +91,36 @@ public class PlayerInventory : MonoBehaviour
                 // Checks if its a teacup or ordinary flowerpot
                 if (flowerPotTiles.PlaceableTiles[0] == pickupTileMap.GetTile(cellPos))
                 {
-                    PlacingFlowerOnTileMap(flower.FlowerInFlowerPot, mousePos);
+                    PlacingItemOnTileMap(flower.FlowerInFlowerPot, mousePos);
                 }
                 else if (flowerPotTiles.PlaceableTiles[1] == pickupTileMap.GetTile(cellPos))
                 {
-                    PlacingFlowerOnTileMap(flower.FlowerInTeaCup, mousePos);
+                    PlacingItemOnTileMap(flower.FlowerInTeaCup, mousePos);
                 }
 
                 // Remove Item from Inventory Array
                 _items[index] = null;
                 isInventoryFull = _items.All(i => i != null);
             }
+
+            // Places the Seeds within a FlowerPot.
+            else if((typeOfItem is Seeds seed) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
+            {
+                if (flowerPotTiles.PlaceableTiles[0] == pickupTileMap.GetTile(cellPos))
+                {
+                    // Places the gameobject in the world, unabled to use the Tile GameObject Instiation.
+                    seed.SeedsInFlowerPotTile.gameObject = seed.SeedsInFlowerPotObj;
+                    PlacingItemOnTileMap(seed.SeedsInFlowerPotTile, mousePos);
+                }
+
+                // Remove Item from Inventory Array
+                _items[index] = null;
+                isInventoryFull = _items.All(i => i != null);
+            }
+
             else if (pickupTileMap.GetTile(cellPos) == null)
             {
-                PlacingFlowerOnTileMap(_items[index]?._ItemTile, mousePos);
+                PlacingItemOnTileMap(_items[index]?._ItemTile, mousePos);
 
                 // Remove Item from Inventory Array
                 _items[index] = null;
@@ -166,7 +182,7 @@ public void PrintOutContentsOfInventoryDEBUGGING()
         return false;
     }
 
-    private void PlacingFlowerOnTileMap(Tile itemTile, Vector2 mousePos) 
+    private void PlacingItemOnTileMap(Tile itemTile, Vector2 mousePos) 
     {
         Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
         Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
@@ -204,7 +220,17 @@ public void PrintOutContentsOfInventoryDEBUGGING()
                     return false;
                 }
 
+            case Seeds:
+                if(flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)) || pickupTileMap.GetTile(cellPos) == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
 
+            case FlowerPotWithSeeds:
             case FlowerInFlowerPot:
             case FlowerPot:
                 if(pickupTileMap.GetTile(cellPos) == null)
@@ -217,6 +243,7 @@ public void PrintOutContentsOfInventoryDEBUGGING()
                     return false;
                 }
 
+               
             
             default: return false;
         }

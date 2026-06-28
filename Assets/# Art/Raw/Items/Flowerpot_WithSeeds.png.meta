@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7dcaf766173e4a4ba6c4f163663767e
+guid: d59b9ce8f31e47e48bdcc6acc1ceca1e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8922592921380583224
-    second: Item_FlowerPot_0
+      213: -131250639964727224
+    second: Flowerpot_WithSeeds_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item_FlowerPot_0
+      name: Flowerpot_WithSeeds_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 837fd42fcfa63db70800000000000000
-      internalID: 8922592921380583224
+      spriteID: 8481c540d34bd2ef0800000000000000
+      internalID: -131250639964727224
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95eee11264e912048a06328db96fc42d
+    spriteID: 95d3d52d50f0acf4185b7f18fd898dc0
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Item_FlowerPot_0: 8922592921380583224
+      Flowerpot_WithSeeds_0: -131250639964727224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

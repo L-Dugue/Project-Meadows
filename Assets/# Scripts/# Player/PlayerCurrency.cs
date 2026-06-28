@@ -6,7 +6,7 @@ public class PlayerCurrency : MonoBehaviour
     [SerializeField] private int playerGems;
 
     // Private Fields
-    private int _maxGems = 999;
+    private const int _maxGems = 999;
 
     // Events
     public delegate void PlayerCurrencyModified(int gems);
@@ -23,6 +23,7 @@ public class PlayerCurrency : MonoBehaviour
 
     public void SellItem(int resaleOfItem)
     {
+        // IF STATEMENT HERE
         playerGems += resaleOfItem;
         OnPlayerCurrencyModified?.Invoke(PlayerGems);
     }
