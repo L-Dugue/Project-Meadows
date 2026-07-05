@@ -11,11 +11,11 @@ using UnityEngine.Tilemaps;
 public class PlayerInventory : MonoBehaviour
 {
     // Events
-    public delegate void ItemAddedToInventory(int indexAddedAt, ItemData? item);
+    public delegate void ItemAddedToInventory(int indexAddedAt, ItemBluePrint? item);
     public static event ItemAddedToInventory OnItemAddedToInventory;
 
     // Create Nullable Array for Items, with 4 slots
-    private ItemData?[] _items = new ItemData?[4];
+    private ItemBluePrint?[] _items = new ItemBluePrint[4];
 
     // Private Members
     private bool isInventoryFull = false;
@@ -32,16 +32,16 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private PlaceableTilesList flowerPotTiles;
 
     // Public Properties
-    public ItemData?[] Items {  get { return _items; } }
+    public ItemBluePrint?[] Items {  get { return _items; } }
 
 
     private void Awake()
     {
-        InventoryUI.RemoveItemFromInventory += RemoveItemFromInventory;
+        //InventoryUI.RemoveItemFromInventory += RemoveItemFromInventory;
     }
 
 
-    public bool AddItemToInventory(ItemData itemPickedUp)
+    public bool AddItemToInventory(ItemBluePrint itemPickedUp)
     {
 
         if (isInventoryIsEmpty)
@@ -69,6 +69,9 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
+
+    // Instead of the Inventory dealing with deciding if it goes into a flowerpot/teacup, the flower should.
+
     /// <summary>
     /// Remove Item from Inventory, placing it on the ground.
     /// </summary>
@@ -81,22 +84,40 @@ public class PlayerInventory : MonoBehaviour
         // Mouse is outside placement range and is a valid tile.
         if (IsOnValidPlaceableTile(index) && IsMouseInPlacementRange())
         {
+            Debug.Log("CALLED");
             Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
             Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace);
-            var typeOfItem = _items[index]?._ItemDataType;
+            var typeOfItem = _items[index]?._ItemObj.GetComponent<Item>();
 
-            if ( (typeOfItem is Flower flower) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
+
+            if (pickupTileMap.GetTile(cellPos) == null)
             {
+                PlacingItem(_items[index]?._ItemObj, mousePos);
 
+                // Remove Item from Inventory Array
+                _items[index] = null;
+                isInventoryFull = _items.All(i => i != null);
+            }
+
+
+            /*
+
+            if ((typeOfItem is Flower flower) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
+            {
                 // Checks if its a teacup or ordinary flowerpot
                 if (flowerPotTiles.PlaceableTiles[0] == pickupTileMap.GetTile(cellPos))
                 {
-                    PlacingItemOnTileMap(flower.FlowerInFlowerPot, mousePos);
+                    Debug.Log("RAN1");
+                    PlacingItem(flower.FlowerInFlowerPot, mousePos);
                 }
                 else if (flowerPotTiles.PlaceableTiles[1] == pickupTileMap.GetTile(cellPos))
                 {
-                    PlacingItemOnTileMap(flower.FlowerInTeaCup, mousePos);
+                    Debug.Log("RAN2");
+                    //PlacingItemOnTileMap(flower.FlowerInTeaCup, mousePos);
                 }
+
+                Debug.Log("RAN3");
+                //PlacingItem(_items[index]?._ItemObj, mousePos);
 
                 // Remove Item from Inventory Array
                 _items[index] = null;
@@ -104,38 +125,32 @@ public class PlayerInventory : MonoBehaviour
             }
 
             // Places the Seeds within a FlowerPot.
-            else if((typeOfItem is Seeds seed) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
+            else if ((typeOfItem is Seeds seed) && flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)))
             {
                 if (flowerPotTiles.PlaceableTiles[0] == pickupTileMap.GetTile(cellPos))
                 {
                     // Places the gameobject in the world, unabled to use the Tile GameObject Instiation.
                     seed.SeedsInFlowerPotTile.gameObject = seed.SeedsInFlowerPotObj;
-                    PlacingItemOnTileMap(seed.SeedsInFlowerPotTile, mousePos);
+                    //PlacingItemOnTileMap(seed.SeedsInFlowerPotTile, mousePos);
                 }
 
                 // Remove Item from Inventory Array
                 _items[index] = null;
                 isInventoryFull = _items.All(i => i != null);
             }
+            */
 
-            else if (pickupTileMap.GetTile(cellPos) == null)
-            {
-                PlacingItemOnTileMap(_items[index]?._ItemTile, mousePos);
 
-                // Remove Item from Inventory Array
-                _items[index] = null;
-                isInventoryFull = _items.All(i => i != null);
-            }
 
-            
-        } 
+
+        }
     }
 
     /// <summary>
     /// Remove a specific Item from Inventory, ignores the index of said item, doesn't place it on the ground.
     /// </summary>
     /// <param name="index"></param>
-    public bool RemoveItemFromInventory(ItemData item) 
+    public bool RemoveItemFromInventory(ItemBluePrint item) 
     {
         if (isInventoryIsEmpty) { return false; } // Does nothing if Inventory is empty.
 
@@ -173,20 +188,24 @@ public void PrintOutContentsOfInventoryDEBUGGING()
     /// </summary>
     /// <param name="index"></param>
     /// <returns></returns>
-    public bool CheckIfPlaceable(int index) 
+    public bool CheckIfPlaceable(int index)
     {
-        if(IsMouseInPlacementRange() && IsOnValidPlaceableTile(index)) 
+        if (IsMouseInPlacementRange() && IsOnValidPlaceableTile(index))
         {
             return true;
         }
         return false;
     }
 
-    private void PlacingItemOnTileMap(Tile itemTile, Vector2 mousePos) 
+    private void PlacingItem(GameObject itemObj, Vector2 mousePos) 
     {
+        Debug.Log("Placing Item");
         Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
         Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
-        pickupTileMap.SetTile(cellPos, itemTile); // Puts the item on that grid
+
+        Instantiate(itemObj, new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), Quaternion.identity);
+
+        //pickupTileMap.SetTile(cellPos, itemTile); // Puts the item on that grid
     }
 
     private bool IsMouseInPlacementRange()
@@ -204,11 +223,11 @@ public void PrintOutContentsOfInventoryDEBUGGING()
 
     private bool IsOnValidPlaceableTile(int index)
     {
-        
+
         Vector2 mouseInWorldSpace = Camera.main.ScreenToWorldPoint(player.MousePos);
         Vector3Int cellPos = pickupTileMap.WorldToCell(mouseInWorldSpace);
 
-        switch (_items[index]?._ItemDataType)
+        switch (_items[index]?._ItemObj.GetComponent<Item>())
         {
             case Flower:
                 if (flowerPlaceableTiles.PlaceableTiles.Contains(tileMapWhichIsPlaceable.GetTile(cellPos)))
@@ -221,7 +240,7 @@ public void PrintOutContentsOfInventoryDEBUGGING()
                 }
 
             case Seeds:
-                if(flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)) || pickupTileMap.GetTile(cellPos) == null)
+                if (flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)) || pickupTileMap.GetTile(cellPos) == null)
                 {
                     return true;
                 }
@@ -233,18 +252,18 @@ public void PrintOutContentsOfInventoryDEBUGGING()
             case FlowerPotWithSeeds:
             case FlowerInFlowerPot:
             case FlowerPot:
-                if(pickupTileMap.GetTile(cellPos) == null)
+                if (pickupTileMap.GetTile(cellPos) == null)
                 {
                     Debug.Log("PLACING");
                     return true;
                 }
-                else 
+                else
                 {
                     return false;
                 }
 
-               
-            
+
+
             default: return false;
         }
 

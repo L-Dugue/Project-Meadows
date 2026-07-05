@@ -82,8 +82,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
-  ItemName: PinkFire Flower
-  ItemDesc: The locals say they have special healing properties.
-  ItemRarity: Legendary
-  ItemPrice: 55
-  ItemTile: {fileID: 11400000, guid: 40f523e5a5f369548ab7089e4328b6af, type: 2}
+  _itemBluePrint: {fileID: 11400000, guid: d509923496984a9499061514521c588b, type: 2}

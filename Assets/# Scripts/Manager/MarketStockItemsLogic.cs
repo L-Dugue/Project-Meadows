@@ -25,7 +25,7 @@ public class MarketStockItemsLogic : MonoBehaviour
 
             // Add the item to the MarketItems
             marketItems.Add(button, randomItem);
-            ItemData itemDetails = randomItem.ReturnItemData();
+            ItemBluePrint itemDetails = randomItem.itemBluePrint;
 
             // update the Market's Sprites
             button.sprite = itemDetails._ImageSprite;

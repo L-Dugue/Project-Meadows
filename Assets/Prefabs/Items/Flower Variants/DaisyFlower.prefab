@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8627884183443795181, guid: d30916d8a68288a41b0f776a6b5031ab, type: 3}
+    - target: {fileID: 3923281848106650071, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5807961596516308677, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 338.13147
@@ -57,6 +61,10 @@ PrefabInstance:
       value: DaisyFlower
       objectReference: {fileID: 0}
     - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+      propertyPath: ItemObj
+      value: 
+      objectReference: {fileID: 8038620482573092101}
+    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: ItemDesc
       value: Very common around these parts.
       objectReference: {fileID: 0}
@@ -93,6 +101,10 @@ PrefabInstance:
       value: Generic
       objectReference: {fileID: 0}
     - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+      propertyPath: _itemBluePrint
+      value: 
+      objectReference: {fileID: 11400000, guid: 11cb1400c8672664283a629e6003b70e, type: 2}
+    - target: {fileID: 8990526072248378361, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
       propertyPath: _flowerInTeaCup
       value: 
       objectReference: {fileID: 11400000, guid: 4530fd8b4722c12498d4a28324cc0a02, type: 2}
@@ -105,3 +117,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+--- !u!1 &8038620482573092101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}
+  m_PrefabInstance: {fileID: 401635556039650018}
+  m_PrefabAsset: {fileID: 0}

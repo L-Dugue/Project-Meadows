@@ -26,9 +26,9 @@ public class PlayerInteraction : MonoBehaviour
             if(contact.TryGetComponent<Item>(out Item pickableItem)) 
             {
                 // Checks to see if Adding the Item to the Inventory worked
-                if (_inventory.AddItemToInventory(pickableItem.ReturnItemData()))
+                if (_inventory.AddItemToInventory(pickableItem.itemBluePrint))
                 {
-                    RemoveItemFromTileSet(pickableItem.gameObject.transform.position);
+                    RemoveItemFromTileSet(contact.gameObject);
                     return;
                 }
             }
@@ -47,9 +47,8 @@ public class PlayerInteraction : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, _interactionRange);
     }
 
-    private void RemoveItemFromTileSet(Vector3 posOfItem)
+    private void RemoveItemFromTileSet(GameObject obj)
     {
-        Vector3Int cellPos = worldTileMap.WorldToCell(posOfItem);
-        worldTileMap.SetTile(cellPos, null);
+        Destroy(obj);
     }
 }

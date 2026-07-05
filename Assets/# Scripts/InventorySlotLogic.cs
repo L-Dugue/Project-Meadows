@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -56,6 +57,7 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
         if (isDragging && player.gameObject.GetComponent<PlayerInventory>().CheckIfPlaceable(InventoryIndex))
         {
             inventoryUI.RemoveItem(InventoryIndex);
+            player.gameObject.GetComponent<PlayerInventory>().RemoveItemFromInventory(InventoryIndex, player.MousePos);
         }
 
         GetComponent<RectTransform>().position = originalPos;

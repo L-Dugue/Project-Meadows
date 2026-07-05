@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb65ae7b1cf8204ca3ffa2f1e14cc19, type: 3}
+  m_Name: PinkFireFlowerPot
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBluePrint
+  _ImageSprite: {fileID: 6712541994659015493, guid: 8e6245b7df335a24a9d31d37920d688d, type: 3}
+  _Name: Flowerpot with Pinkfire Flower
+  _Description: Flowerpot containing a PinkFire Flower
+  _ItemRarity: Rare
+  _ItemPrice: 15
+  _ItemObj: {fileID: 8144007549484479688, guid: b88cc10d4bf8436469c5ed5451e28b40, type: 3}

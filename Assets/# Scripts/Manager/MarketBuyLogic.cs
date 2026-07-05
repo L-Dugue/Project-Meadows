@@ -12,21 +12,17 @@ public class MarketBuyLogic : MonoBehaviour
 
     public void SpawnBoughtItem() 
     {
-        if(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemTile != null) 
-        {
-            foreach(Transform itemSlot in boughtItemSlots) 
-            { 
-                Vector3Int cellPos = tileMapWhichIsPlaceable.WorldToCell(itemSlot.position); 
-                
-                if(tileMapWhichIsPlaceable.GetTile(cellPos) == null && (playerCurrency.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice) >= 0)
+        // If Statement to check if the specific tile houses an object or not.
+            foreach (Transform itemSlot in boughtItemSlots)
+            {
+                Vector3Int cellPos = tileMapWhichIsPlaceable.WorldToCell(itemSlot.position);
+
+                if ((playerCurrency.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice) >= 0)
                 {
-                    tileMapWhichIsPlaceable.SetTile(cellPos, marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemTile);
+                    Instantiate(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemObj, new Vector3(tileMapWhichIsPlaceable.GetCellCenterWorld(cellPos).x, tileMapWhichIsPlaceable.GetCellCenterWorld(cellPos).y, 0), Quaternion.identity);
                     playerCurrency.BuyItem(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice);
                     return;
                 }
             }
-            
-            
-        }
     }
 }

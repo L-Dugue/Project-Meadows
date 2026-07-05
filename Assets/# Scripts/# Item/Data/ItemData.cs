@@ -10,7 +10,7 @@ public struct ItemData
     public readonly string _Description; // Description of the Item
     public readonly string _ItemRarity;
     public readonly int _ItemPrice;
-    public readonly Tile _ItemTile;
+    public readonly GameObject _ItemObj;
     public readonly Item _ItemDataType;
     
 
@@ -21,14 +21,14 @@ public struct ItemData
     /// <param name="itemDesc"></param>
     /// <param name="itemSprite"></param>
     /// <param name="flowerType"></param>
-    public ItemData(string itemName, string itemDesc, Sprite itemSprite, Item item, Tile itemTile, string itemRarity, int itemPrice) 
+    public ItemData(string itemName, string itemDesc, Sprite itemSprite, Item item, GameObject itemObj, string itemRarity, int itemPrice) 
     {
         _ImageSprite = itemSprite;
         _Name = itemName;
         _Description = itemDesc;
         _ItemRarity = itemRarity;
         _ItemDataType = item;
-        _ItemTile = itemTile;
+        _ItemObj = itemObj;
         _ItemPrice = itemPrice;
     }
 

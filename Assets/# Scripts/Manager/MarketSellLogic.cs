@@ -14,12 +14,12 @@ public class MarketSellLogic : MonoBehaviour
 
     public void SellItem()
     {
-        Debug.Log("RAN");
-        if (playerInventory.RemoveItemFromInventory(ItemsSelectLogic.CurrentlySelectedItemInSell))
-        {
-            inventoryUI.RemoveItem(ItemsSelectLogic.CurrentlySelectedItemInSell);
-            playerCurrency.SellItem(ItemsSelectLogic.CurrentlySelectedItemInSell._ItemPrice); 
-        }
+        //Debug.Log("RAN");
+        //if (playerInventory.RemoveItemFromInventory(ItemsSelectLogic.CurrentlySelectedItemInSell))
+        //{
+        //    inventoryUI.RemoveItem(ItemsSelectLogic.CurrentlySelectedItemInSell);
+        //    playerCurrency.SellItem(ItemsSelectLogic.CurrentlySelectedItemInSell._ItemPrice); 
+        //}
         
     }
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb65ae7b1cf8204ca3ffa2f1e14cc19, type: 3}
+  m_Name: PinkFireFlower
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBluePrint
+  _ImageSprite: {fileID: -6120620833265751254, guid: ea1471774b7c9eb41bc6d835a9f643bd, type: 3}
+  _Name: PinkFire Flower
+  _Description: One of the most rarest flowers.
+  _ItemRarity: Rare
+  _ItemPrice: 15
+  _ItemObj: {fileID: 7646003670795562983, guid: 144c80eaabe8e284d83666e8d4394c6d, type: 3}

@@ -85,13 +85,17 @@ PrefabInstance:
       value: Legendary
       objectReference: {fileID: 0}
     - target: {fileID: 7863920825340942634, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
+      propertyPath: _itemBluePrint
+      value: 
+      objectReference: {fileID: 11400000, guid: c99af25bb2675df4cb85b257f8fc30ce, type: 2}
+    - target: {fileID: 7863920825340942634, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
       propertyPath: _flowerInTeaCup
       value: 
-      objectReference: {fileID: 11400000, guid: 40f523e5a5f369548ab7089e4328b6af, type: 2}
+      objectReference: {fileID: 1958495908034116833, guid: 6866288bc2dfd53409bca9329173adad, type: 3}
     - target: {fileID: 7863920825340942634, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
       propertyPath: _flowerInFlowerPot
       value: 
-      objectReference: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
+      objectReference: {fileID: 8144007549484479688, guid: b88cc10d4bf8436469c5ed5451e28b40, type: 3}
     - target: {fileID: 8933609299408901428, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
       propertyPath: m_Name
       value: PinkfireFlower

@@ -89,6 +89,10 @@ PrefabInstance:
       value: Common
       objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _itemBluePrint
+      value: 
+      objectReference: {fileID: 11400000, guid: c782504b9642a974a9bdde5cfc5ae373, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: _flowerInFlowerPot
       value: 
       objectReference: {fileID: 11400000, guid: e5e086cf19ca0c9478e3e1ac6b793639, type: 2}

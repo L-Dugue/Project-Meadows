@@ -13,7 +13,7 @@ public class InventoryUI : MonoBehaviour
 
     // Private Fields
     private Sprite defaultSprite;
-    private ItemData?[] itemDatas = new ItemData?[4];
+    private ItemBluePrint?[] itemDatas = new ItemBluePrint?[4];
 
 
     private void Awake()
@@ -24,9 +24,9 @@ public class InventoryUI : MonoBehaviour
     }
 
     // Public Methods
-    public void UpdateInventoryUI(int index, ItemData? item) 
+    public void UpdateInventoryUI(int index, ItemBluePrint? item) 
     {
-        inventoryImagesPanels[index].sprite = item.Value._ImageSprite;
+        inventoryImagesPanels[index].sprite = item._ImageSprite;
         itemDatas[index] = item;
     }
 
@@ -55,7 +55,7 @@ public class InventoryUI : MonoBehaviour
             }
        }
 
-        foreach (ItemData? itemData in itemDatas)
+        foreach (ItemBluePrint? itemData in itemDatas)
         {
             if (itemData != null && (itemData?._Name == item._Name))
             {

@@ -90,9 +90,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ItemName: PinkFire Flower
-  ItemDesc: The locals say they have special healing properties. It has a tendency
-    to make the pots very hot.
-  ItemRarity: Legendary
-  ItemPrice: 65
-  ItemTile: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
+  _itemBluePrint: {fileID: 11400000, guid: 1498a2d6d0454bb45b014612b6971fc2, type: 2}

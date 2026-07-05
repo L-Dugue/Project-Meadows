@@ -4,17 +4,21 @@ using UnityEngine.Tilemaps;
 public class Flower : Item
 {
     [Header("Variant of Flower In Pots")]
-    [SerializeField] private Tile _flowerInFlowerPot;
-    [SerializeField] private Tile _flowerInTeaCup;
+    [SerializeField] private GameObject _flowerInFlowerPot;
+    [SerializeField] private GameObject _flowerInTeaCup;
 
     // Properties
-    public Tile FlowerInFlowerPot { get { return _flowerInFlowerPot;  }   }
-    public Tile FlowerInTeaCup { get { return _flowerInTeaCup; } }
-    public override ItemData ReturnItemData()
-    {
-        ItemData flowerData = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemTile, base.ItemRarity, base.ItemPrice);
-        return flowerData;
-    }
+    public GameObject FlowerInFlowerPot { get { return _flowerInFlowerPot;  }   }
+    public GameObject FlowerInTeaCup { get { return _flowerInTeaCup; } }
+
+
+
+
+    //public override ItemData ReturnItemData()
+    //{
+    //    ItemData flowerData = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemObj, base.ItemRarity, base.ItemPrice);
+    //    return flowerData;
+    //}
 
 
     //public override void ApplyDetailsToItem(ItemData? itemData)

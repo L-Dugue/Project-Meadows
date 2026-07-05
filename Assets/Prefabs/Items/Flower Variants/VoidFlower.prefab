@@ -98,6 +98,10 @@ PrefabInstance:
       value: Rare
       objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _itemBluePrint
+      value: 
+      objectReference: {fileID: 11400000, guid: c68baa938b1058e4a865535938e90c00, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: _flowerInTeaCup
       value: 
       objectReference: {fileID: 11400000, guid: d4007b9ad743e044783143c0b2411394, type: 2}

@@ -22,19 +22,19 @@ public class MarketSelectItemsLogic : MonoBehaviour
 
     // Private Variables
     private Dictionary<Image, Item> itemsInStock = new Dictionary<Image, Item>();
-    private ItemData currentlySelectedItemInBuy;
-    private ItemData currentlySelectedItemInSell;
+    private ItemBluePrint currentlySelectedItemInBuy;
+    private ItemBluePrint currentlySelectedItemInSell;
 
     // Public Properties
-    public ItemData CurrentlySelectedItemInBuy {  get { return currentlySelectedItemInBuy; } }
-    public ItemData CurrentlySelectedItemInSell { get { return currentlySelectedItemInSell; } }
+    public ItemBluePrint CurrentlySelectedItemInBuy {  get { return currentlySelectedItemInBuy; } }
+    public ItemBluePrint CurrentlySelectedItemInSell { get { return currentlySelectedItemInSell; } }
 
 
     public void OnMarketItemSelectedInBuy(Image itemSlotSelected) 
     {
         itemsInStock = stockedItems.ItemsInStock();
-        DisplayItemDetails(itemsInStock[itemSlotSelected].ReturnItemData());
-        currentlySelectedItemInBuy = itemsInStock[itemSlotSelected].ReturnItemData();
+        DisplayItemDetails(itemsInStock[itemSlotSelected].itemBluePrint);
+        currentlySelectedItemInBuy = itemsInStock[itemSlotSelected].itemBluePrint;
     }
 
     public void OnMarketItemselectedInSell(Image itemSlotSelected) 
@@ -42,9 +42,9 @@ public class MarketSelectItemsLogic : MonoBehaviour
         
         foreach(Item item in itemsAbledToBeSold) 
         {
-            if(item.ReturnItemData()._ImageSprite == itemSlotSelected.sprite)
+            if (item.itemBluePrint._ImageSprite == itemSlotSelected.sprite)
             {
-                currentlySelectedItemInSell = item.ReturnItemData();
+                currentlySelectedItemInSell = item.itemBluePrint;
                 break;
             }
         }
@@ -52,7 +52,7 @@ public class MarketSelectItemsLogic : MonoBehaviour
         DisplayItemDetails(currentlySelectedItemInSell);
     }
 
-    private void DisplayItemDetails(ItemData itemData) 
+    private void DisplayItemDetails(ItemBluePrint itemData) 
     {
         // Iterates through names
         foreach(TextMeshProUGUI itemName in itemNames)

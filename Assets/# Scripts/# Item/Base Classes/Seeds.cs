@@ -11,9 +11,11 @@ public class Seeds : Item
     public GameObject SeedsInFlowerPotObj { get { return _seedsInFlowerPotObj; } }
     public Tile SeedsInFlowerPotTile { get { return _seedsInFlowerPotTile; } }
 
-    public override ItemData ReturnItemData()
-    {
-        ItemData seedItem = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemTile, base.ItemRarity, base.ItemPrice);
-        return seedItem;
-    }
+    //public override ItemData ReturnItemData()
+    //{
+    //    ItemData seedItem = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemObj, base.ItemRarity, base.ItemPrice);
+    //    return seedItem;
+    //}
+
+   
 }
