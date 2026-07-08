@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 public class PlayerInteraction : MonoBehaviour
 {
     [Header("Interaction Settings")]
-    [SerializeField] private float _interactionRange = 1.0f;
+    [SerializeField] private float _interactionRange = 0.5f;
     [SerializeField] private LayerMask _interactableLayer;
     [SerializeField] private PlayerInventory _inventory;
 

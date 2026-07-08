@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07d600495f4b6f2469b5f50f97496457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerActual
-  ItemName: 
-  ItemDesc: 
-  ItemRarity: 
-  ItemPrice: 0
-  ItemTile: {fileID: 0}
+  _itemBluePrint: {fileID: 0}
   _flowerInFlowerPot: {fileID: 0}
   _flowerInTeaCup: {fileID: 0}
+  _interactionRange: 0.35
+  _interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64

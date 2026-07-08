@@ -54,7 +54,7 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         // Checks to ensure that the item CAN be placed in the world before removing from Inventory.
-        if (isDragging && player.gameObject.GetComponent<PlayerInventory>().CheckIfPlaceable(InventoryIndex))
+        if (isDragging && TileManager.Instance.CheckIfPlaceable(player.gameObject.GetComponent<PlayerInventory>().Items, InventoryIndex))
         {
             inventoryUI.RemoveItem(InventoryIndex);
             player.gameObject.GetComponent<PlayerInventory>().RemoveItemFromInventory(InventoryIndex, player.MousePos);

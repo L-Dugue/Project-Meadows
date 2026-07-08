@@ -1,43 +1,43 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Flower : Item
 {
     [Header("Variant of Flower In Pots")]
-    [SerializeField] private GameObject _flowerInFlowerPot;
-    [SerializeField] private GameObject _flowerInTeaCup;
+    [SerializeField] private UseableFlowerPots useableFlowerPots;
 
-    // Properties
-    public GameObject FlowerInFlowerPot { get { return _flowerInFlowerPot;  }   }
-    public GameObject FlowerInTeaCup { get { return _flowerInTeaCup; } }
-
+    [Header("Interaction Settings")]
+    [SerializeField] private float _interactionRange = 1.0f;
+    [SerializeField] private LayerMask _interactableLayer;
 
 
+    private void Update()
+    {
+        CheckIfPlacedOnFlowerPot();
+    }
 
-    //public override ItemData ReturnItemData()
-    //{
-    //    ItemData flowerData = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemObj, base.ItemRarity, base.ItemPrice);
-    //    return flowerData;
-    //}
+    private void CheckIfPlacedOnFlowerPot()
+    {
+        Collider2D contact = Physics2D.OverlapCircle(transform.position, _interactionRange, _interactableLayer);
+
+        if (contact.TryGetComponent<FlowerPot>(out FlowerPot pot))
+        {
+
+            //if(useableFlowerPots.FlowerInFlowerPot(pot.itemBluePrint._ItemObj, out GameObject potRecieved))
+            //{
+            //    TileManager.Instance.PlacingItem(potRecieved, gameObject.transform, this.gameObject);
+            //}
+           
+        }
+
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _interactionRange);
+    }
 
 
-    //public override void ApplyDetailsToItem(ItemData? itemData)
-    //{
-    //    // Applying scale for debugging
-    //    gameObject.transform.localScale = new Vector3(0.08f, 0.08f, 1);
-
-    //    // Loading Values from ItemData
-    //    FlowerName = itemData?._Name;
-    //    FlowerDesc = itemData?._Description;
-    //    TypeOfFlower = itemData?._FlowerType;
-    //    FlowerImage = itemData?._ImageSprite;
-
-
-    //    // Applying Values
-    //    gameObject.GetComponent<SpriteRenderer>().sprite = FlowerImage;
-    //    gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
-    //    gameObject.layer = 6;
-    //    gameObject.name = FlowerName;
-
-    //}
 }

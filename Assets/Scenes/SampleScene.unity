@@ -3159,6 +3159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurpleFlower
       objectReference: {fileID: 0}
+    - target: {fileID: 6671544857863337605, guid: b3ff155b98670884b9a2503974744677, type: 3}
+      propertyPath: _interactionRange
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 8126977711528772537, guid: b3ff155b98670884b9a2503974744677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.5
@@ -10216,9 +10220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3a1a24efd71e54dabcfede5eba4ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileManager
-  min: {x: -19.84, y: -13.9}
-  max: {x: 9.4, y: 8.46}
-  _pickupTileMap: {fileID: 290443688}
+  pickupTileMap: {fileID: 290443688}
+  enviromentTileMap: {fileID: 1967897061}
+  flowerPlaceableTiles: {fileID: 11400000, guid: c2da57911bfe339428d81b078ad75a0d, type: 2}
+  player: {fileID: 1125368730}
+  playerInv: {fileID: 2039900232}
 --- !u!4 &1203664019
 Transform:
   m_ObjectHideFlags: 0

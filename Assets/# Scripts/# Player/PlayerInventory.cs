@@ -33,6 +33,7 @@ public class PlayerInventory : MonoBehaviour
 
     // Public Properties
     public ItemBluePrint?[] Items {  get { return _items; } }
+    public float PlacementRange { get { return placementRange; } }
 
 
     private void Awake()
@@ -81,23 +82,24 @@ public class PlayerInventory : MonoBehaviour
     {
         if (isInventoryIsEmpty) { return; } // Does nothing if Inventory is empty.
 
-        // Mouse is outside placement range and is a valid tile.
-        if (IsOnValidPlaceableTile(index) && IsMouseInPlacementRange())
+        // Mouse is inside placement range and is a valid tile.
+        if (TileManager.Instance.CheckIfPlaceable(_items, index))
         {
             Debug.Log("CALLED");
             Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
             Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace);
             var typeOfItem = _items[index]?._ItemObj.GetComponent<Item>();
 
+            TileManager.Instance.PlacingItem(_items[index]?._ItemObj, mousePos);
 
-            if (pickupTileMap.GetTile(cellPos) == null)
-            {
-                PlacingItem(_items[index]?._ItemObj, mousePos);
+            // Remove Item from Inventory Array
+            _items[index] = null;
+            isInventoryFull = _items.All(i => i != null);
 
-                // Remove Item from Inventory Array
-                _items[index] = null;
-                isInventoryFull = _items.All(i => i != null);
-            }
+            //if (pickupTileMap.GetTile(cellPos) == null)
+            //{
+                
+            //}
 
 
             /*
@@ -181,93 +183,6 @@ public void PrintOutContentsOfInventoryDEBUGGING()
             if (_items[index] == null) { continue; }
             Debug.Log($"Name: {_items[index]?._Name}, Desc: {_items[index]?._Description}, Type Of Flower: {_items[index]?._ItemRarity}");
         }
-    }
-
-    /// <summary>
-    /// Used outside of PlayerInventory class to check if the item can be placed.
-    /// </summary>
-    /// <param name="index"></param>
-    /// <returns></returns>
-    public bool CheckIfPlaceable(int index)
-    {
-        if (IsMouseInPlacementRange() && IsOnValidPlaceableTile(index))
-        {
-            return true;
-        }
-        return false;
-    }
-
-    private void PlacingItem(GameObject itemObj, Vector2 mousePos) 
-    {
-        Debug.Log("Placing Item");
-        Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
-        Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
-
-        Instantiate(itemObj, new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), Quaternion.identity);
-
-        //pickupTileMap.SetTile(cellPos, itemTile); // Puts the item on that grid
-    }
-
-    private bool IsMouseInPlacementRange()
-    {
-        Vector2 mouseInWorldSpace = Camera.main.ScreenToWorldPoint(player.MousePos);
-        if(Mathf.Pow((mouseInWorldSpace.x - transform.position.x), 2) + Mathf.Pow((mouseInWorldSpace.y - transform.position.y), 2) < Mathf.Pow(placementRange, 2)) 
-        {
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
-    }
-
-    private bool IsOnValidPlaceableTile(int index)
-    {
-
-        Vector2 mouseInWorldSpace = Camera.main.ScreenToWorldPoint(player.MousePos);
-        Vector3Int cellPos = pickupTileMap.WorldToCell(mouseInWorldSpace);
-
-        switch (_items[index]?._ItemObj.GetComponent<Item>())
-        {
-            case Flower:
-                if (flowerPlaceableTiles.PlaceableTiles.Contains(tileMapWhichIsPlaceable.GetTile(cellPos)))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            case Seeds:
-                if (flowerPotTiles.PlaceableTiles.Contains(pickupTileMap.GetTile(cellPos)) || pickupTileMap.GetTile(cellPos) == null)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            case FlowerPotWithSeeds:
-            case FlowerInFlowerPot:
-            case FlowerPot:
-                if (pickupTileMap.GetTile(cellPos) == null)
-                {
-                    Debug.Log("PLACING");
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-
-
-            default: return false;
-        }
-
-
     }
 
 

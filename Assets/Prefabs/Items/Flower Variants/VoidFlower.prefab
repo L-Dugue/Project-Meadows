@@ -104,11 +104,11 @@ PrefabInstance:
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: _flowerInTeaCup
       value: 
-      objectReference: {fileID: 11400000, guid: d4007b9ad743e044783143c0b2411394, type: 2}
+      objectReference: {fileID: 8569707036684319484, guid: a3f1c8992d77d8e44b0ff50556f76e06, type: 3}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: _flowerInFlowerPot
       value: 
-      objectReference: {fileID: 11400000, guid: c63a873b84456e24dba539baccea7159, type: 2}
+      objectReference: {fileID: 1713300253492206231, guid: 8868f0dc17d332e4c8732a9a30c95dca, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
