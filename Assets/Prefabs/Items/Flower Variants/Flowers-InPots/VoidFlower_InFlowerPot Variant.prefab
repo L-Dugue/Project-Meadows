@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 9206668996658253028, guid: 36a2cec61ac90a1449ececbab9db883a, type: 3}
+    - target: {fileID: 2852130459681059588, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4718795817891785750, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.99026
@@ -90,9 +94,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
-  ItemName: Void Flower
-  ItemDesc: These flowers only show their true colors when under the light of a black
-    hole. They like to create their own gravity around their pot.
-  ItemRarity: Uncommon
-  ItemPrice: 30
-  ItemTile: {fileID: 11400000, guid: c63a873b84456e24dba539baccea7159, type: 2}
+  _itemBluePrint: {fileID: 11400000, guid: 5e9ffb22bbe934e48b97361f33e15098, type: 2}

@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1594442951627709611, guid: b3ff155b98670884b9a2503974744677, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1135480627940537054, guid: 28d115cc4a8c11843bac54b25054a8ea, type: 3}
+    - target: {fileID: 1594442951627709611, guid: b3ff155b98670884b9a2503974744677, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5354457470689196699, guid: b3ff155b98670884b9a2503974744677, type: 3}
       propertyPath: m_Name
       value: PurpleFlower_Teacup Variant
@@ -78,8 +86,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
-  ItemName: Purple Daisy
-  ItemDesc: Discovered by the founder of this town, very special to the locals.
-  ItemRarity: Common
-  ItemPrice: 5
-  ItemTile: {fileID: 0}
+  _itemBluePrint: {fileID: 11400000, guid: a6066fe073a83834d9ccabd86eb4361a, type: 2}

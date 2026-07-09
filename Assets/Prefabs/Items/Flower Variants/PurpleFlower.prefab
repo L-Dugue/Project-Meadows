@@ -13,6 +13,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3500380681099519349, guid: e98b5204abe79c243bc93e84f3c6cf16, type: 3}
     - target: {fileID: 4078631378046287530, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078631378046287530, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078631378046287530, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -92,6 +100,10 @@ PrefabInstance:
       propertyPath: _itemBluePrint
       value: 
       objectReference: {fileID: 11400000, guid: c782504b9642a974a9bdde5cfc5ae373, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: useableFlowerPots
+      value: 
+      objectReference: {fileID: 11400000, guid: a9ea4b3941b0cc34ca544d4b85180fec, type: 2}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: _flowerInFlowerPot
       value: 

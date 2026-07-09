@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1302176592637858732}
+  - {fileID: 8481549112812267785}
   m_Father: {fileID: 3411689982479441081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &4929864948479991200
@@ -247,6 +248,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6636529532398089884}
     m_Modifications:
+    - target: {fileID: 258807035747259227, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 258807035747259227, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1816922137978323208, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
       propertyPath: m_Name
       value: FlowerPot
@@ -305,7 +314,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3024349939863469470, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
   m_PrefabInstance: {fileID: 4317514470202748466}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &104580327432462638
+--- !u!1001 &7731959153204605499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6636529532398089884}
+    m_Modifications:
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329931612847056804, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_Name
+      value: Teacup_Flowerpot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329931612847056804, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+--- !u!4 &8481549112812267785 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2232074683642239794, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}
+  m_PrefabInstance: {fileID: 7731959153204605499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &776998087314570522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

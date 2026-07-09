@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb65ae7b1cf8204ca3ffa2f1e14cc19, type: 3}
+  m_Name: PurpleFlowerFlowerPot
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBluePrint
+  _ImageSprite: {fileID: 7861421709636659743, guid: 493a4627843869c4b8216af1757bd722, type: 3}
+  _Name: Flowerpot with a Purple Flower
+  _Description: Flowerpot containing a Purple Flower
+  _ItemRarity: Rare
+  _ItemPrice: 15
+  _ItemObj: {fileID: 5002935886598683563, guid: 8a77ed51959933d449c241091a1c99b6, type: 3}

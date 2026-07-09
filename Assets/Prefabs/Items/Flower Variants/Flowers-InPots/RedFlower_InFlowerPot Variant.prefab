@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 253085628180005835, guid: ea467b3be507717408b94c2ed0961eb0, type: 3}
+    - target: {fileID: 6584142831212662264, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1290594501898774486, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
     m_RemovedGameObjects: []
@@ -90,8 +94,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
-  ItemName: RedFire Flower
-  ItemDesc: Very common, a cousin of the rare PinkFire Flower
-  ItemRarity: Common
-  ItemPrice: 10
-  ItemTile: {fileID: 11400000, guid: 8f7e837ee54773a44b499baa36580694, type: 2}
+  _itemBluePrint: {fileID: 11400000, guid: 1e1b866e4edebae4e80bd6b9e9af1be1, type: 2}

@@ -93,6 +93,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1958495908034116833, guid: 6866288bc2dfd53409bca9329173adad, type: 3}
     - target: {fileID: 7863920825340942634, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
+      propertyPath: useableFlowerPots
+      value: 
+      objectReference: {fileID: 11400000, guid: b20401c9f21e21c4d9d877e5b1ad5295, type: 2}
+    - target: {fileID: 7863920825340942634, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
       propertyPath: _flowerInFlowerPot
       value: 
       objectReference: {fileID: 8144007549484479688, guid: b88cc10d4bf8436469c5ed5451e28b40, type: 3}

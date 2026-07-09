@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8256197641986474492, guid: 8a7af455b4a6ab347a0d74828dde616b, type: 3}
+    - target: {fileID: 2852130459681059588, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4718795817891785750, guid: 47e3735d3a359b04eaaf225517b8daf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 608.595
@@ -82,9 +86,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
-  ItemName: Void Flower
-  ItemDesc: These flowers only show their true colors when under the light of a black
-    hole. Shame its in a teacup.
-  ItemRarity: Uncommon
-  ItemPrice: 25
-  ItemTile: {fileID: 11400000, guid: d4007b9ad743e044783143c0b2411394, type: 2}
+  _itemBluePrint: {fileID: 11400000, guid: 44db02a32e39b004f80f3a6b520b20bb, type: 2}

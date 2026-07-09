@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1149997485
   m_SortingLayer: 3
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -142,8 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerActual
   _itemBluePrint: {fileID: 0}
-  _flowerInFlowerPot: {fileID: 0}
-  _flowerInTeaCup: {fileID: 0}
+  useableFlowerPots: {fileID: 0}
   _interactionRange: 0.35
   _interactableLayer:
     serializedVersion: 2

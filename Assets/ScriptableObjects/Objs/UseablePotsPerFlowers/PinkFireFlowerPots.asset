@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 849e068e7f6895b468773fc7a6089049, type: 3}
-  m_Name: VoidFlowerPots
+  m_Name: PinkFireFlowerPots
   m_EditorClassIdentifier: Assembly-CSharp::UseableFlowerPots
   flowersInPots:
-  - {fileID: 1713300253492206231, guid: 8868f0dc17d332e4c8732a9a30c95dca, type: 3}
-  - {fileID: 8569707036684319484, guid: a3f1c8992d77d8e44b0ff50556f76e06, type: 3}
+  - {fileID: 8144007549484479688, guid: b88cc10d4bf8436469c5ed5451e28b40, type: 3}
+  - {fileID: 1958495908034116833, guid: 6866288bc2dfd53409bca9329173adad, type: 3}
   pots:
   - {fileID: 1816922137978323208, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
   - {fileID: 3329931612847056804, guid: efabc28d3bf2ef24ba65e06eb6f45387, type: 3}

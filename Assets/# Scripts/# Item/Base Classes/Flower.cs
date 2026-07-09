@@ -12,24 +12,33 @@ public class Flower : Item
     [SerializeField] private LayerMask _interactableLayer;
 
 
-    private void Update()
+
+    private void Awake()
     {
         CheckIfPlacedOnFlowerPot();
     }
 
     private void CheckIfPlacedOnFlowerPot()
     {
-        Collider2D contact = Physics2D.OverlapCircle(transform.position, _interactionRange, _interactableLayer);
-
-        if (contact.TryGetComponent<FlowerPot>(out FlowerPot pot))
+        Collider2D[] contacts = Physics2D.OverlapCircleAll(transform.position, _interactionRange, _interactableLayer);
+        
+        foreach(Collider2D contact in contacts)
         {
+            if(contact.gameObject == this.gameObject)
+            {
+                continue;
+            }
 
-            //if(useableFlowerPots.FlowerInFlowerPot(pot.itemBluePrint._ItemObj, out GameObject potRecieved))
-            //{
-            //    TileManager.Instance.PlacingItem(potRecieved, gameObject.transform, this.gameObject);
-            //}
-           
+            if (contact.TryGetComponent<FlowerPot>(out FlowerPot pot))
+            {
+                if (useableFlowerPots.FlowerInFlowerPot(pot.itemBluePrint._ItemObj, out GameObject potRecieved))
+                {
+                    TileManager.Instance.CombindItems(potRecieved, gameObject.transform.position, this.gameObject, contact.gameObject);
+                }
+
+            }
         }
+       
 
     }
 

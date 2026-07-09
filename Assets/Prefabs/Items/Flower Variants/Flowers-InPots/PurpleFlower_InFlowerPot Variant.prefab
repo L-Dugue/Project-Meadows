@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7861421709636659743, guid: 493a4627843869c4b8216af1757bd722, type: 3}
+    - target: {fileID: 1594442951627709611, guid: b3ff155b98670884b9a2503974744677, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5354457470689196699, guid: b3ff155b98670884b9a2503974744677, type: 3}
       propertyPath: m_Name
       value: PurpleFlower_InFlowerPot Variant
@@ -90,8 +94,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc19c6fc016f84584feaee3495f621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ItemName: Purple Daisy
-  ItemDesc: Discovered by the founder of this town, very special to the locals.
-  ItemRarity: Common
-  ItemPrice: 15
-  ItemTile: {fileID: 11400000, guid: e5e086cf19ca0c9478e3e1ac6b793639, type: 2}
+  _itemBluePrint: {fileID: 11400000, guid: a116face2c8642b4db2318c3758cbcc7, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb65ae7b1cf8204ca3ffa2f1e14cc19, type: 3}
+  m_Name: VoidFlowerFlowerPot
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBluePrint
+  _ImageSprite: {fileID: 9206668996658253028, guid: 36a2cec61ac90a1449ececbab9db883a, type: 3}
+  _Name: Flowerpot with a Void Flower
+  _Description: Flowerpot containing a Void Flower
+  _ItemRarity: Rare
+  _ItemPrice: 15
+  _ItemObj: {fileID: 1713300253492206231, guid: 8868f0dc17d332e4c8732a9a30c95dca, type: 3}

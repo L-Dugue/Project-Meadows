@@ -113,11 +113,12 @@ public class TileManager : MonoBehaviour
     /// <param name="itemObj"></param>
     /// <param name="pos"></param>
     /// <param name="originalObj"></param>
-    public void PlacingItem(GameObject itemObj, Transform pos, GameObject ObjWhichCalled)
+    public void CombindItems(GameObject itemObj, Vector3 pos, GameObject ObjOne, GameObject ObjTwo)
     {
-        GameObject item = Instantiate(itemObj, pos);
+        GameObject item = Instantiate(itemObj, pos, Quaternion.identity);
         item.transform.parent = pickupTileMap.transform;
-        Destroy(ObjWhichCalled);
+        Destroy(ObjTwo);
+        Destroy(ObjOne);
     }
 
 
