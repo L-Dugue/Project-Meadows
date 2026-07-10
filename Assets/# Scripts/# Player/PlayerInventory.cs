@@ -86,19 +86,24 @@ public class PlayerInventory : MonoBehaviour
         if (TileManager.Instance.CheckIfPlaceable(_items, index))
         {
             Debug.Log("CALLED");
-            Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
-            Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace);
+           
             var typeOfItem = _items[index]?._ItemObj.GetComponent<Item>();
+            if (typeOfItem is Flower && TileManager.Instance.IsEmptyOfItem<FlowerPot>(mousePos))
+            {
+                TileManager.Instance.PlacingItem(_items[index]?._ItemObj, mousePos);
+                RemoveItemDataFromInventory(index);
+            }
+            else if (TileManager.Instance.IsEmptyOfItem(mousePos))
+            {
+                TileManager.Instance.PlacingItem(_items[index]?._ItemObj, mousePos);
+                RemoveItemDataFromInventory(index);
 
-            TileManager.Instance.PlacingItem(_items[index]?._ItemObj, mousePos);
+            }
 
-            // Remove Item from Inventory Array
-            _items[index] = null;
-            isInventoryFull = _items.All(i => i != null);
 
             //if (pickupTileMap.GetTile(cellPos) == null)
             //{
-                
+
             //}
 
 
@@ -185,6 +190,12 @@ public void PrintOutContentsOfInventoryDEBUGGING()
         }
     }
 
+    private void RemoveItemDataFromInventory(int index)
+    {
+        // Remove Item from Inventory Array
+        _items[index] = null;
+        isInventoryFull = _items.All(i => i != null);
+    }
 
     private void OnDrawGizmosSelected()
     {

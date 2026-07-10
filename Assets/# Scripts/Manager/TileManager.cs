@@ -1,16 +1,12 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Yarn;
 
 
 public class TileManager : MonoBehaviour
 {
-    //    [Header("ScanZone Bounds")]
-    //    private Bounds _scanZone;
-    //    [SerializeField] private Vector2 min; // Defining Min
-    //    [SerializeField] private Vector2 max; // Defining Max
-
-    // MAKE INTO SINGLETON!
     public static TileManager Instance { get; private set; }
 
     [Header("Tilemap Placement Settings")]
@@ -23,6 +19,10 @@ public class TileManager : MonoBehaviour
     [Header("Player Scripts")]
     [SerializeField] private Player player;
     [SerializeField] private PlayerInventory playerInv;
+
+    [Header("Item Check Settings")]
+    [SerializeField] private float _interactionRange = 1.0f;
+    [SerializeField] private LayerMask _interactableLayer;
 
 
     private void Awake()
@@ -81,6 +81,43 @@ public class TileManager : MonoBehaviour
 
     }
 
+    public bool IsEmptyOfItem(Vector2 mousePos)
+    {
+        Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
+        Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
+
+        Collider2D contact = Physics2D.OverlapCircle(new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), _interactionRange, _interactableLayer);
+
+
+        if (contact == null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+
+    public bool IsEmptyOfItem<ItemToIgnore>(Vector2 mousePos) where ItemToIgnore : Component
+    {
+        Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
+        Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
+
+        Collider2D contact = Physics2D.OverlapCircle(new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), _interactionRange, _interactableLayer);
+
+        if (contact == null || contact.TryGetComponent<ItemToIgnore>(out _))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
 
 
 
@@ -131,80 +168,10 @@ public class TileManager : MonoBehaviour
         return false;
     }
 
-
-   
-
-
-
-
-
-
-    //private void Awake()
-    //{
-    //    PickupTileMap = _pickupTileMap;
-
-    //    _scanZone.center = transform.position;
-    //    _scanZone.min = min;
-    //    _scanZone.max = max;
-
-    //    PopulateTileWithGameObjects();
-    //}
-
-    //public static void ChangeTileTo(Tile tile, Transform pos)
-    //{
-    //    Vector3Int cellPos = PickupTileMap.WorldToCell(pos.position);
-    //    GameObject originalObj = PickupTileMap.GetInstantiatedObject(cellPos);
-
-    //    PickupTileMap.SetTile(cellPos, tile);
-
-    //}
-
-    //public static void ChangeTileSpriteTo(Sprite sprite, Transform pos)
-    //{
-    //    Vector3Int cellPos = PickupTileMap.WorldToCell(pos.position);
-    //    TileBase tileAtPos = PickupTileMap.GetTile(cellPos);
-
-    //    if(tileAtPos is GrowingPlantTile growingPlantTile)
-    //    {
-    //        Debug.Log("RAN");
-    //        growingPlantTile.ChangeSprite(sprite);
-    //    }
-    //}
-
-    //public static void RefreshTileAtPos(Transform pos)
-    //{
-    //    Vector3Int cellPos = PickupTileMap.WorldToCell(pos.position);
-    //    TileBase tileAtPos = PickupTileMap.GetTile(cellPos);
-    //    Debug.Log(tileAtPos.name);
-    //    tileAtPos.RefreshTile(cellPos, PickupTileMap);
-    //}
-
-
-    //private void PopulateTileWithGameObjects()
-    //{
-    //    for (int x = (int)_scanZone.min.x; x < _scanZone.max.x; x++)
-    //    {
-    //        for (int y = (int)_scanZone.min.y; y < _scanZone.max.y; y++)
-    //        {
-    //            Vector3Int pos = new(x, y, 0);
-
-    //            if (_pickupTileMap.GetTile(pos) is GrowingPlantTile tile)
-    //            {
-    //                Debug.Log(tile.name);
-    //            }
-    //        }
-    //    }
-    //}
-
-    //void OnDrawGizmos()
-    //{
-    //    _scanZone.min = min;
-    //    _scanZone.max = max;
-    //    _scanZone.center = transform.position;
-
-
-    //    Gizmos.DrawWireCube(_scanZone.center, _scanZone.size);
-    //    Gizmos.color = Color.hotPink;
-    //}
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _interactionRange);
+    }
 
 }

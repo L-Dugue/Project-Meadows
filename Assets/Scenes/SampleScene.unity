@@ -8108,6 +8108,10 @@ MonoBehaviour:
   flowerPlaceableTiles: {fileID: 11400000, guid: c2da57911bfe339428d81b078ad75a0d, type: 2}
   player: {fileID: 1125368730}
   playerInv: {fileID: 2039900232}
+  _interactionRange: 0.4
+  _interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &1203664019
 Transform:
   m_ObjectHideFlags: 0
@@ -8117,7 +8121,7 @@ Transform:
   m_GameObject: {fileID: 1203664017}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

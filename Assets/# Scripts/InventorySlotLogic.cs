@@ -56,8 +56,16 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
         // Checks to ensure that the item CAN be placed in the world before removing from Inventory.
         if (isDragging && TileManager.Instance.CheckIfPlaceable(player.gameObject.GetComponent<PlayerInventory>().Items, InventoryIndex))
         {
-            inventoryUI.RemoveItem(InventoryIndex);
-            player.gameObject.GetComponent<PlayerInventory>().RemoveItemFromInventory(InventoryIndex, player.MousePos);
+            var typeOfItem = player.gameObject.GetComponent<PlayerInventory>().Items[InventoryIndex]._ItemObj.GetComponent<Item>();
+
+            if ((typeOfItem is Flower) && TileManager.Instance.IsEmptyOfItem<FlowerPot>(player.MousePos))
+            {
+                RemoveItemFromInventorySlot();
+            }
+            else if (TileManager.Instance.IsEmptyOfItem(player.MousePos))
+            {
+                RemoveItemFromInventorySlot();
+            }
         }
 
         GetComponent<RectTransform>().position = originalPos;
@@ -76,5 +84,10 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
         Debug.Log("Stopped Hovering");
     }
 
+    private void RemoveItemFromInventorySlot()
+    {
+        inventoryUI.RemoveItem(InventoryIndex);
+        player.gameObject.GetComponent<PlayerInventory>().RemoveItemFromInventory(InventoryIndex, player.MousePos);
+    }
     
 }
