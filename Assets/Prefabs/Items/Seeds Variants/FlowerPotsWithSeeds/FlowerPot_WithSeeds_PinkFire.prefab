@@ -79,9 +79,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: -1149997485
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -131250639964727224, guid: d59b9ce8f31e47e48bdcc6acc1ceca1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -141,10 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8bde99fd9eb9b4d8994fa5ce6b9336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ItemName: Flower Pot With PinkFire Seeds
-  ItemDesc: A Flower Pot with the seeds of the PinkFire inside.
-  ItemRarity: Legendary
-  ItemPrice: 15
-  ItemTile: {fileID: 11400000, guid: 9f029afd3a38d6a418d08d9dd4939f9e, type: 2}
-  _semiGrownFlower: {fileID: 11400000, guid: 8ff763393e4a4264a952da42357bc688, type: 2}
-  _fullyGrownFlower: {fileID: 11400000, guid: 16beec40ed941f248a73128018faa9cd, type: 2}
+  _itemBluePrint: {fileID: 11400000, guid: dba6a102e7e1d694f981b28bf12ab558, type: 2}
+  _semiGrownFlower: {fileID: 7316445381290235030, guid: 1644c5d95b8873949825b5ae0ab19849, type: 3}
+  _fullyGrownFlower: {fileID: 8144007549484479688, guid: b88cc10d4bf8436469c5ed5451e28b40, type: 3}

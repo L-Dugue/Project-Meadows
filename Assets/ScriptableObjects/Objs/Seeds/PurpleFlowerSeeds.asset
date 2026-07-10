@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb65ae7b1cf8204ca3ffa2f1e14cc19, type: 3}
+  m_Name: PurpleFlowerSeeds
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBluePrint
+  _ImageSprite: {fileID: 8695003919873640505, guid: 03e48e50fe536c142aa6890bbf4434f9, type: 3}
+  _Name: Purple Flower Seeds
+  _Description: The seeds of the Purple Flower.
+  _ItemRarity: Common
+  _ItemPrice: 15
+  _ItemObj: {fileID: 1538743158279534075, guid: 07ce8c4024e78ac478481b884646dcf4, type: 3}

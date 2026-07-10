@@ -4,13 +4,10 @@ using UnityEngine.Tilemaps;
 public class FlowerPotWithSeeds : FlowerPot
 {
     [Header("Flower Stages")]
-    [SerializeField] private Tile _semiGrownFlower;
-    [SerializeField] private Tile _fullyGrownFlower;
+    [SerializeField] private Sprite _semiGrownFlower;
+    [SerializeField] private GameObject _fullyGrownFlower;
 
-    // Public Properties
-    public Tile SemiGrownFlower { get { return _semiGrownFlower; } }
-    public Tile FullyGrownFlower { get { return _fullyGrownFlower; } }
-
+    
     // --- State Pattern Variables ---
     public FlowerPotWithSeedsBaseState currentState;
 
@@ -18,6 +15,10 @@ public class FlowerPotWithSeeds : FlowerPot
     public FullyGrownState fullyGrownState = new FullyGrownState();
     public SapplingState sapplingState = new SapplingState();
     public SeedState seedState = new SeedState();
+
+    // Public Properties
+    public Sprite SemiGrownFlower { get { return _semiGrownFlower; } }
+    public GameObject FullyGrownFlower { get { return _fullyGrownFlower; } }
 
 
     private void Start()

@@ -6,6 +6,7 @@ public abstract class Item : MonoBehaviour
     [SerializeField] private ItemBluePrint _itemBluePrint;
     public ItemBluePrint itemBluePrint { get { return _itemBluePrint; }
 
+
     //[Header("Variables for ItemData")]
     //[SerializeField] protected string ItemName;
     //[SerializeField] protected string ItemDesc;

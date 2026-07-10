@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Flower : Item
+public class Flower : Item, IPlaceableOnItem
 {
     [Header("Variant of Flower In Pots")]
     [SerializeField] private UseableFlowerPots useableFlowerPots;
@@ -15,16 +15,16 @@ public class Flower : Item
 
     private void Awake()
     {
-        CheckIfPlacedOnFlowerPot();
+        PlaceOnItem();
     }
 
-    private void CheckIfPlacedOnFlowerPot()
+    public void PlaceOnItem()
     {
         Collider2D[] contacts = Physics2D.OverlapCircleAll(transform.position, _interactionRange, _interactableLayer);
-        
-        foreach(Collider2D contact in contacts)
+
+        foreach (Collider2D contact in contacts)
         {
-            if(contact.gameObject == this.gameObject)
+            if (contact.gameObject == this.gameObject)
             {
                 continue;
             }
@@ -38,8 +38,6 @@ public class Flower : Item
 
             }
         }
-       
-
     }
 
     private void OnDrawGizmosSelected()

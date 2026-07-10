@@ -158,6 +158,19 @@ public class TileManager : MonoBehaviour
         Destroy(ObjOne);
     }
 
+    /// <summary>
+    /// Replace Object One with Object Two.
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <param name="ObjOne"></param>
+    /// <param name="ObjTwo"></param>
+    public void ReplaceItems(Vector3 pos, GameObject ObjOne, GameObject ObjTwo)
+    {
+        GameObject item = Instantiate(ObjTwo, pos, Quaternion.identity);
+        item.transform.parent = pickupTileMap.transform;
+        Destroy(ObjOne);
+    }
+
 
     public bool CheckIfPlaceable(ItemBluePrint[] _items, int index)
     {

@@ -88,11 +88,13 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log("CALLED");
            
             var typeOfItem = _items[index]?._ItemObj.GetComponent<Item>();
-            if (typeOfItem is Flower && TileManager.Instance.IsEmptyOfItem<FlowerPot>(mousePos))
+
+            if ( ( (typeOfItem is Flower) || (typeOfItem is Seeds) ) && TileManager.Instance.IsEmptyOfItem<FlowerPot>(mousePos))
             {
                 TileManager.Instance.PlacingItem(_items[index]?._ItemObj, mousePos);
                 RemoveItemDataFromInventory(index);
             }
+
             else if (TileManager.Instance.IsEmptyOfItem(mousePos))
             {
                 TileManager.Instance.PlacingItem(_items[index]?._ItemObj, mousePos);

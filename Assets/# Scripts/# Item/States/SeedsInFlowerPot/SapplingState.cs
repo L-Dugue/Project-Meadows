@@ -6,6 +6,7 @@ public class SapplingState : FlowerPotWithSeedsBaseState
     public override void EnterState(FlowerPotWithSeeds flowerpot)
     {
         Debug.Log("Entered Sappling State");
+        flowerpot.GetComponent<SpriteRenderer>().sprite = flowerpot.SemiGrownFlower;
         flowerpot.StartCoroutine(GrowTime(flowerpot));
     }
     public override IEnumerator GrowTime(FlowerPotWithSeeds flowerpot)

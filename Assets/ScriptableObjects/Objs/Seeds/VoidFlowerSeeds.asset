@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb65ae7b1cf8204ca3ffa2f1e14cc19, type: 3}
+  m_Name: VoidFlowerSeeds
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBluePrint
+  _ImageSprite: {fileID: 5912117974815981323, guid: 7578a8303e349104f8b1bd633a5360c5, type: 3}
+  _Name: Void Flower Seeds
+  _Description: The seeds of the Void Flower.
+  _ItemRarity: Rare
+  _ItemPrice: 15
+  _ItemObj: {fileID: 1864596280089528742, guid: 3a0816049c0cb994a9754e6b8e5e81be, type: 3}
