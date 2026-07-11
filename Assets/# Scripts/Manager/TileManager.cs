@@ -81,7 +81,7 @@ public class TileManager : MonoBehaviour
 
     }
 
-    public bool IsEmptyOfItem(Vector2 mousePos)
+    public bool IsEmptyOfItemViaMousePos(Vector2 mousePos)
     {
         Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
         Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
@@ -100,7 +100,7 @@ public class TileManager : MonoBehaviour
         
     }
 
-    public bool IsEmptyOfItem<ItemToIgnore>(Vector2 mousePos) where ItemToIgnore : Component
+    public bool IsEmptyOfItemViaMousePos<ItemToIgnore>(Vector2 mousePos) where ItemToIgnore : Component
     {
         Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
         Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
@@ -108,6 +108,23 @@ public class TileManager : MonoBehaviour
         Collider2D contact = Physics2D.OverlapCircle(new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), _interactionRange, _interactableLayer);
 
         if (contact == null || contact.TryGetComponent<ItemToIgnore>(out _))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    public bool IsEmptyOfItemViaPosition(Vector2 pos)
+    {
+        Vector3Int cellPos = pickupTileMap.WorldToCell(pos); // Finds the grid which matches the position
+        Collider2D contact = Physics2D.OverlapCircle(new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), _interactionRange, _interactableLayer);
+
+
+        if (contact == null)
         {
             return true;
         }
@@ -134,11 +151,19 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    public void PlacingItem(GameObject itemObj, Vector2 mousePos)
+    public void PlacingItemViaMousePos(GameObject itemObj, Vector2 mousePos)
     {
         Debug.Log("Placing Item");
         Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
         Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
+        GameObject item = Instantiate(itemObj, new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), Quaternion.identity);
+
+        item.transform.parent = pickupTileMap.transform;
+    }
+
+    public void PlacingItemViaPosition(GameObject itemObj, Vector2 pos)
+    {
+        Vector3Int cellPos = pickupTileMap.WorldToCell(pos); // Finds the grid which matches the position
         GameObject item = Instantiate(itemObj, new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), Quaternion.identity);
 
         item.transform.parent = pickupTileMap.transform;

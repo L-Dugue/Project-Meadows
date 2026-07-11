@@ -15,11 +15,11 @@ public class MarketBuyLogic : MonoBehaviour
         // If Statement to check if the specific tile houses an object or not.
             foreach (Transform itemSlot in boughtItemSlots)
             {
-                Vector3Int cellPos = tileMapWhichIsPlaceable.WorldToCell(itemSlot.position);
+                if (!TileManager.Instance.IsEmptyOfItemViaPosition(itemSlot.position)) { continue; }
 
-                if ((playerCurrency.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice) >= 0)
+                if ( (playerCurrency.PlayerGems - marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice) >= 0)
                 {
-                    Instantiate(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemObj, new Vector3(tileMapWhichIsPlaceable.GetCellCenterWorld(cellPos).x, tileMapWhichIsPlaceable.GetCellCenterWorld(cellPos).y, 0), Quaternion.identity);
+                    TileManager.Instance.PlacingItemViaPosition(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemObj, itemSlot.position);
                     playerCurrency.BuyItem(marketSelectItemsLogic.CurrentlySelectedItemInBuy._ItemPrice);
                     return;
                 }

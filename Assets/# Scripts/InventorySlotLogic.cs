@@ -58,11 +58,11 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
         {
             var typeOfItem = player.gameObject.GetComponent<PlayerInventory>().Items[InventoryIndex]._ItemObj.GetComponent<Item>();
 
-            if ( ( (typeOfItem is Flower) || (typeOfItem is Seeds) ) && TileManager.Instance.IsEmptyOfItem<FlowerPot>(player.MousePos))
+            if ( ( (typeOfItem is Flower) || (typeOfItem is Seeds) ) && TileManager.Instance.IsEmptyOfItemViaMousePos<FlowerPot>(player.MousePos))
             {
                 RemoveItemFromInventorySlot();
             }
-            else if (TileManager.Instance.IsEmptyOfItem(player.MousePos))
+            else if (TileManager.Instance.IsEmptyOfItemViaMousePos(player.MousePos))
             {
                 RemoveItemFromInventorySlot();
             }
