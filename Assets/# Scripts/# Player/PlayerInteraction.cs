@@ -41,6 +41,25 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
+    public void HarvestItem()
+    {
+        Collider2D contact = Physics2D.OverlapCircle(transform.position, _interactionRange, _interactableLayer);
+
+        if (contact != null)
+        {
+            // Interact with item
+            if (contact.TryGetComponent<IHarvestable>(out IHarvestable pickableItem))
+            {
+                // Checks to see if Adding the Item to the Inventory worked
+                if (_inventory.AddItemToInventory(pickableItem.HarvestItem()))
+                {
+                    return;
+                }
+            }
+
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

@@ -6,14 +6,10 @@ using UnityEngine.InputSystem;
 
 public class Player : Character
 {
-   
-
     // Private Var
     private Vector2 mousePos;
     private int _maxGems = 999;
 
-    // Debugging Properties
-    public MarketInteraction DEBUGVAR_OPENUPSELLUI;
 
     // Public Properties
     public Vector2 MousePos { get { return mousePos; } }
@@ -45,11 +41,11 @@ public class Player : Character
         mousePos = context.ReadValue<Vector2>();
     }
 
-    public void OnDebug(InputAction.CallbackContext context) 
+    public void OnHarvest(InputAction.CallbackContext context) 
     {
         if (context.started) 
         {
-            DEBUGVAR_OPENUPSELLUI.EnterSellMarketDEBUG();
+            playerInteraction.HarvestItem();
         }
     }
 

@@ -52,7 +52,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Debug",
+                    "name": "Harvest",
                     "type": "Button",
                     "id": "87b0751b-5efe-4468-98c3-2f9e3a8af80d",
                     "expectedControlType": "",
@@ -305,11 +305,11 @@
                 {
                     "name": "",
                     "id": "6547d60c-022f-416d-b8e9-da34f173bde1",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Debug",
+                    "action": "Harvest",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

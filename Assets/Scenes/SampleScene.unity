@@ -22160,6 +22160,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 177287555493911348, guid: b91cd684b2751de44bb31e51348ad185, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 177287555493911348, guid: b91cd684b2751de44bb31e51348ad185, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnHarvest
+      objectReference: {fileID: 0}
     - target: {fileID: 354484113524093436, guid: b91cd684b2751de44bb31e51348ad185, type: 3}
       propertyPath: m_Name
       value: Player

@@ -95,3 +95,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerInFlowerPot
   _itemBluePrint: {fileID: 11400000, guid: 5e9ffb22bbe934e48b97361f33e15098, type: 2}
+  itemHarvestedOff: {fileID: 11400000, guid: c68baa938b1058e4a865535938e90c00, type: 2}
+  mainItemAfterHarvest: {fileID: 1816922137978323208, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}

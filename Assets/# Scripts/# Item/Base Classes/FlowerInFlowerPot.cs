@@ -1,10 +1,14 @@
 using UnityEngine;
 
-public class FlowerInFlowerPot : Item
+public class FlowerInFlowerPot : Item, IHarvestable
 {
-    //public override ItemData ReturnItemData()
-    //{
-    //    ItemData flowerpot = new ItemData(base.ItemName, base.ItemDesc, gameObject.GetComponent<SpriteRenderer>().sprite, this, base.ItemObj, base.ItemRarity, base.ItemPrice);
-    //    return flowerpot;
-    //}
+    [Header("Item Harvesting Properties")]
+    [SerializeField] private ItemBluePrint itemHarvestedOff;
+    [SerializeField] private GameObject mainItemAfterHarvest;
+
+    public ItemBluePrint HarvestItem()
+    {
+        TileManager.Instance.ReplaceItems(gameObject.transform.position, this.gameObject, mainItemAfterHarvest);
+        return itemHarvestedOff;
+    }
 }

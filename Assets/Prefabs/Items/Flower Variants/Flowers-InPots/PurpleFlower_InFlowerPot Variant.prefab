@@ -95,3 +95,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _itemBluePrint: {fileID: 11400000, guid: a116face2c8642b4db2318c3758cbcc7, type: 2}
+  itemHarvestedOff: {fileID: 11400000, guid: c782504b9642a974a9bdde5cfc5ae373, type: 2}
+  mainItemAfterHarvest: {fileID: 1816922137978323208, guid: f0ff211c39cf6a7479fbc6845e8214af, type: 3}
