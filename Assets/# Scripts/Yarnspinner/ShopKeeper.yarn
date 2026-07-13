@@ -1,0 +1,21 @@
+﻿
+title: OpenShopDialogue
+---
+<<disallow_movement DialogueManager true>>
+Shop Keeper: Welcome to my shop! What are you looking for today?
+    -> I would like to sell my items!
+        Shop Keeper: Lets see what you got to sell.
+        <<open_market_sell Market>> 
+    -> I would like to buy some items!
+        Shop Keeper: I have quite a few items in stock today!
+        <<open_market_buy Market>> 
+    -> Nothing right now.
+        Shop Keeper: Gotcha! Come again soon!
+        <<disallow_movement DialogueManager false>>
+===
+
+title: CloseShopDialogue
+---
+Shop Keeper: Thank you! Come again soon!
+<<disallow_movement DialogueManager false>>
+===

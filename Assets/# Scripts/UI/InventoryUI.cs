@@ -42,7 +42,7 @@ public class InventoryUI : MonoBehaviour
        
     }
 
-    public void RemoveItem(ItemData item)
+    public void RemoveItem(ItemBluePrint item)
     {
         int panelToMakeDefaultIndex = 0;
 

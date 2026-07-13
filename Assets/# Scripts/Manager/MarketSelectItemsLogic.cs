@@ -15,6 +15,7 @@ public class MarketSelectItemsLogic : MonoBehaviour
 
     [Header("Other Scripts")]
     [SerializeField] private MarketStockItemsLogic stockedItems;
+    [SerializeField] private MarketInteraction marketInteraction;
 
     [Header("All Items available to Sell")]
     [SerializeField] private Item[] itemsAbledToBeSold;
@@ -63,13 +64,21 @@ public class MarketSelectItemsLogic : MonoBehaviour
         // Iterates through Descs
         foreach (TextMeshProUGUI itemDesc in itemDesc)
         {
+           
             itemDesc.text = itemData._Description;
         }
 
         // Iterates through Prices
         foreach (TextMeshProUGUI itemPrice in itemPrice)
         {
-            itemPrice.text = itemData._ItemPrice.ToString();
+            if (marketInteraction.IsSellActivate)
+            {
+                itemPrice.text = ((int)(itemData._ItemPrice/2)).ToString();
+            }
+            else
+            {
+                itemPrice.text = itemData._ItemPrice.ToString();
+            }
         }
 
         // Iterates through Rarities

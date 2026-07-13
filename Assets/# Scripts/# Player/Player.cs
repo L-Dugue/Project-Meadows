@@ -17,6 +17,19 @@ public class Player : Character
 
     void FixedUpdate()
     {
+        // Checks to see if the Player is in dialogue.
+        if (DialogueManager.Instance.DialogueOn && (rigidBody.linearVelocity.x != 0 || rigidBody.linearVelocity.y != 0))
+        {
+            rigidBody.linearVelocity = Vector2.zero;
+            return;
+        }
+        else if(DialogueManager.Instance.DialogueOn)
+        {
+            
+            return;
+        }
+
+
         MoveCharacter();
         FlipSprite(moveInput.x);
     }

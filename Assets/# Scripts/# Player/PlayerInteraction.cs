@@ -35,7 +35,7 @@ public class PlayerInteraction : MonoBehaviour
 
             if(contact.transform.parent.TryGetComponent<MarketInteraction>(out MarketInteraction market))
             {
-                market.EnterMarket();
+                market.InteractWithMarket();
                 return;
             }
         }
@@ -56,6 +56,8 @@ public class PlayerInteraction : MonoBehaviour
                     return;
                 }
             }
+
+
 
         }
     }
