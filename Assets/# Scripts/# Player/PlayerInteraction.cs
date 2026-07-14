@@ -33,11 +33,21 @@ public class PlayerInteraction : MonoBehaviour
                 }
             }
 
+            // If its a Market
             if(contact.transform.parent.TryGetComponent<MarketInteraction>(out MarketInteraction market))
             {
                 market.InteractWithMarket();
                 return;
             }
+
+            // If its a Bed
+            if (contact.transform.parent.TryGetComponent<PlayerSleep>(out PlayerSleep playerSleep))
+            {
+                DialogueManager.Instance.PlayerStartSleep();
+                return;
+            }
+
+
         }
     }
 

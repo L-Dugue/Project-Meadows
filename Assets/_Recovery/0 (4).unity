@@ -506,7 +506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &106147317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -947,7 +947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &158450115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2161,7 +2161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &379328509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6154,6 +6154,11 @@ MonoBehaviour:
   - {fileID: 1020096447}
   - {fileID: 298868322}
   - {fileID: 1851869605}
+  - {fileID: 1887856952}
+  - {fileID: 106147319}
+  - {fileID: 2033374661}
+  - {fileID: 158450117}
+  - {fileID: 379328511}
 --- !u!114 &943827792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9436,6 +9441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIAnimationPlayer
   playerSleepClip: {fileID: 7400000, guid: 1d3de56a17423b74aa848c6bd9cb67fd, type: 2}
   animation: {fileID: 1420607474}
+  blackScreen: {fileID: 0}
 --- !u!1 &1430807018
 GameObject:
   m_ObjectHideFlags: 0
@@ -15400,7 +15406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1887856950
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21997,7 +22003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2033374659
 RectTransform:
   m_ObjectHideFlags: 0

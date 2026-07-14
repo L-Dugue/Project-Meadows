@@ -12,13 +12,21 @@ public class MarketStockItemsLogic : MonoBehaviour
 
     private void Start()
     {
-        foreach(Image button in buttons)
+        RestockItems();
+    }
+
+    public void RestockItems()
+    {
+        // Clear the Dictionary.
+        marketItems.Clear();
+
+        foreach (Image button in buttons)
         {
             // Grabs random Item
             Item randomItem = items[Random.Range(0, items.Length)];
 
             // If the marketItems dict already contains that item, generate another.
-            while (marketItems.ContainsValue(randomItem)) 
+            while (marketItems.ContainsValue(randomItem))
             {
                 randomItem = items[Random.Range(0, items.Length)];
             }
@@ -31,6 +39,5 @@ public class MarketStockItemsLogic : MonoBehaviour
             button.sprite = itemDetails._ImageSprite;
         }
     }
-
     public Dictionary<Image, Item> ItemsInStock() => marketItems;
 }

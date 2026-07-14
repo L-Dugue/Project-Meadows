@@ -1,0 +1,16 @@
+﻿title: PlayerSleep
+---
+<<disallow_movement DialogueManager true>>
+Do you want to sleep?
+    -> Yes.
+        <<Playersleep Sleeping>>
+    -> No.
+        <<disallow_movement DialogueManager false>>
+
+===
+
+title: PlayerEndSleep
+---
+You are nice and refreshed.
+<<disallow_movement DialogueManager false>>
+===

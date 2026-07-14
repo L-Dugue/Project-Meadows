@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    // Dialogue Options
     public void OpenShopDialogue()
     {
         dialogueRunner.StartDialogue("OpenShopDialogue");
@@ -39,6 +40,16 @@ public class DialogueManager : MonoBehaviour
     public void CloseShopDialogue()
     {
         dialogueRunner.StartDialogue("CloseShopDialogue");
+    }
+
+    public void PlayerStartSleep()
+    {
+        dialogueRunner.StartDialogue("PlayerSleep");
+    }
+
+    public void PlayerEndSleep()
+    {
+        dialogueRunner.StartDialogue("PlayerEndSleep");
     }
 
     [YarnCommand("disallow_movement")]
