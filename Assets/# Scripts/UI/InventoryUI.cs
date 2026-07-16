@@ -19,6 +19,7 @@ public class InventoryUI : MonoBehaviour
     private void Awake()
     {
         PlayerInventory.OnItemAddedToInventory += UpdateInventoryUI;
+        PlayerInventory.OnRemoveItemViaBlueprint += RemoveItem;
         defaultSprite = inventoryImagesPanels[0].GetComponent<Image>().sprite;
 
     }

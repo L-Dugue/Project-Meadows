@@ -1,0 +1,63 @@
+﻿title: TownsPersonNPC
+---
+Towns Person: Hello!
+
+    -> Hello! How are you?
+        Towns Person: I'm doing great! Just on my way to the town. Had to buy some items for my house.
+        <<if $hasCompletedTownPersonQuest == false>>
+            Towns Person: Speaking of items, I forgot something!
+            Towns Person: I wanted to get a <b>Void Flower</b>, they are pretty rare around these parts.
+            Towns Person: Do you happen to have one on you?
+            -> Yes I do!
+                <<CallQuest TownsPerson_NPC>>
+                <<if $givenVoidFlower >>
+                    Towns Person: Thank you so much!
+                    A <b>Void Flower</b> was taken from you.
+                    Towns Person: I have some gems on me, it's the least I can give.
+                    <<CompleteQuest TownsPerson_NPC 50>>
+                    You recieved <b>50</b> gems.
+                    <<set $hasCompletedTownPersonQuest = true>>
+                    
+                <<else>>
+                    Towns Person: Oh, you don't have it. That's okay!
+                <<endif>>
+            -> Sorry, I do not.
+                Towns Person: That's okay. Someone in the town may have one. 
+        <<else>>
+            Towns Person: Thank you again for giving me that <b>Void Flower</b>! Many thanks!
+        <<endif>>              
+    -> Hello! Do you know where the town is?
+        Towns Person: It's a bit of a ways from here. About an hours walk I'd say at least.
+        Towns Person: You'll make it there in no time, especially if you were to go now!
+    -> Why do you look similar to the Shopkeeper?
+        Towns Person: Ohh, her? She is my cousin! She loves to wander around, it surprises me how she can carry all of those items on her... 
+        Towns Person: And the gems to give those who sell to her... I think she may be stealing from our grandmother...
+        Towns Person: Well, who would know!
+    -> Sorry to bother!
+        Towns Person: No need to be sorry! You aren't bothering.
+===
+
+title: NotMeetTownPerson
+---
+-> Hello! How are you?
+        Towns Person: I'm doing great! Just on my way to the town. Had to buy some items for my house.
+        Towns Person: Speaking of items, I forgot something!
+        Towns Person: I wanted to get a <b>Void Flower</b>, they are pretty rare around these parts.
+        Towns Person: Do you happen to have one on you?
+            -> Yes I do!
+                Towns Person: Thank you so much!
+                A <b>Void Flower</b> was taken from you.
+                Towns Person: I have some gems on me, it's the least I can give.
+                You recieved <b>50</b> gems.
+
+            -> Sorry, I do not.
+                Towns Person: That's okay. Someone in the town may have one. 
+    -> Hello! Do you know where the town is?
+    -> Why do you look similar to the Shopkeeper?
+    -> Sorry to bother!
+===
+
+title: HasMeetTownPerson
+---
+
+===

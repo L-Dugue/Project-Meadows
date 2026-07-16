@@ -14,6 +14,8 @@ public class PlayerInventory : MonoBehaviour
     public delegate void ItemAddedToInventory(int indexAddedAt, ItemBluePrint? item);
     public static event ItemAddedToInventory OnItemAddedToInventory;
 
+    public delegate void RemoveItemFromInventoryViaBlueprint(ItemBluePrint bluePrint);
+    public static event RemoveItemFromInventoryViaBlueprint OnRemoveItemViaBlueprint;
     // Create Nullable Array for Items, with 4 slots
     private ItemBluePrint?[] _items = new ItemBluePrint[4];
 
@@ -99,6 +101,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 TileManager.Instance.PlacingItemViaMousePos(_items[index]?._ItemObj, mousePos);
                 RemoveItemDataFromInventory(index);
+               
 
             }
 
@@ -168,9 +171,9 @@ public class PlayerInventory : MonoBehaviour
         {
             if (itemData != null && (itemData?._Name == item._Name)) 
             {
-                _items[Array.IndexOf(_items, itemData)] = null;
-                isInventoryFull = _items.All(i => i != null);
+                RemoveItemDataFromInventory(Array.IndexOf(_items, itemData));
                 Debug.Log("Removed item!");
+                OnRemoveItemViaBlueprint?.Invoke(itemData);
                 return true; // Item Removed
             }
         }

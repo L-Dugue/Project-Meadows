@@ -47,6 +47,12 @@ public class PlayerInteraction : MonoBehaviour
                 return;
             }
 
+            if (contact.transform.parent.TryGetComponent<NPC>(out NPC npc))
+            {
+                npc.PlayDialogue();
+                return;
+            }
+
 
         }
     }

@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     // Public Properties
     public bool DialogueOn { get { return dialogueOn; } }
+    public DialogueRunner DialogueRunner { get { return dialogueRunner; } }
 
     private void Awake()
     {
@@ -50,6 +51,11 @@ public class DialogueManager : MonoBehaviour
     public void PlayerEndSleep()
     {
         dialogueRunner.StartDialogue("PlayerEndSleep");
+    }
+
+    public void PlayDialogue(string node)
+    {
+        dialogueRunner.StartDialogue(node);
     }
 
     [YarnCommand("disallow_movement")]

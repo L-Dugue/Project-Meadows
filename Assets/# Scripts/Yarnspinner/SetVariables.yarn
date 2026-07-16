@@ -1,0 +1,6 @@
+﻿title: SetVariables
+---
+// Town Person Variables
+<<declare $hasCompletedTownPersonQuest = false>>
+<<declare $givenVoidFlower = false>>
+===

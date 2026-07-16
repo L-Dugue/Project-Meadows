@@ -13,7 +13,7 @@ public class PlayerCurrency : MonoBehaviour
     public static event PlayerCurrencyModified OnPlayerCurrencyModified;
 
     // Public Properties
-    public int PlayerGems { get { return playerGems; } }
+    public int PlayerGems { get { return playerGems; } set { Mathf.Clamp(value, 0, 999); } }
 
     public void BuyItem(int costOfItem)
     {
