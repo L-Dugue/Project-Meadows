@@ -100,6 +100,32 @@ public class TileManager : MonoBehaviour
         
     }
 
+    public bool IsEmptyOfItemViaMousePos<ItemToIgnore>(Vector2 mousePos, out ItemToIgnore itemToIgnoreReturned) where ItemToIgnore : Component
+    {
+        Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
+        Vector3Int cellPos = pickupTileMap.WorldToCell(mousePosInWorldSpace); // Finds the grid which matches the position
+
+        Collider2D contact = Physics2D.OverlapCircle(new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), _interactionRange, _interactableLayer);
+
+        // Checks to see if the spot is NULL, or if it has an item that can ignored. Else the item can NOT be placed.
+        if (contact == null)
+        {
+            itemToIgnoreReturned = null;
+            return true;
+        }
+        else if(contact.TryGetComponent<ItemToIgnore>(out ItemToIgnore val))
+        {
+            itemToIgnoreReturned = contact.GetComponent<ItemToIgnore>();
+            return true;
+        }
+        else
+        {
+            itemToIgnoreReturned = null;
+            return false;
+        }
+
+    }
+
     public bool IsEmptyOfItemViaMousePos<ItemToIgnore>(Vector2 mousePos) where ItemToIgnore : Component
     {
         Vector3 mousePosInWorldSpace = Camera.main.ScreenToWorldPoint(mousePos); // Takes mousePos from Screen space to World Space
@@ -107,7 +133,7 @@ public class TileManager : MonoBehaviour
 
         Collider2D contact = Physics2D.OverlapCircle(new Vector3(pickupTileMap.GetCellCenterWorld(cellPos).x, pickupTileMap.GetCellCenterWorld(cellPos).y, 0), _interactionRange, _interactableLayer);
 
-        if (contact == null || contact.TryGetComponent<ItemToIgnore>(out _))
+        if (contact == null || contact.TryGetComponent<ItemToIgnore>(out ItemToIgnore val))
         {
             return true;
         }

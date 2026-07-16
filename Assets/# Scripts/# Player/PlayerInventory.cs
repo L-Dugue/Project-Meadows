@@ -91,9 +91,15 @@ public class PlayerInventory : MonoBehaviour
            
             var typeOfItem = _items[index]?._ItemObj.GetComponent<Item>();
 
-            if ( ( (typeOfItem is Flower) || (typeOfItem is Seeds) ) && TileManager.Instance.IsEmptyOfItemViaMousePos<FlowerPot>(mousePos))
+            if ( ( (typeOfItem is Flower) || (typeOfItem is Seeds) ) && TileManager.Instance.IsEmptyOfItemViaMousePos<FlowerPot>(mousePos, out FlowerPot item))
             {
+                if (item is FlowerPotWithSeeds)
+                {
+                    return;
+                }
+
                 TileManager.Instance.PlacingItemViaMousePos(_items[index]?._ItemObj, mousePos);
+                Debug.Log("Placed Seeds");
                 RemoveItemDataFromInventory(index);
             }
 
@@ -101,8 +107,6 @@ public class PlayerInventory : MonoBehaviour
             {
                 TileManager.Instance.PlacingItemViaMousePos(_items[index]?._ItemObj, mousePos);
                 RemoveItemDataFromInventory(index);
-               
-
             }
 
 

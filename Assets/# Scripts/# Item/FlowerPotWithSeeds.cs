@@ -19,11 +19,15 @@ public class FlowerPotWithSeeds : FlowerPot
     // Public Properties
     public Sprite SemiGrownFlower { get { return _semiGrownFlower; } }
     public GameObject FullyGrownFlower { get { return _fullyGrownFlower; } }
+    public bool HasFlowerInside { get { return _hasFlowerInside; } }
 
+    // Private Fields
+    private bool _hasFlowerInside;
 
     private void Start()
     {
         SwitchState(seedState);
+        _hasFlowerInside = true;
     }
 
     public void SwitchState(FlowerPotWithSeedsBaseState newState)

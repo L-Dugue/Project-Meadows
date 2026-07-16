@@ -58,8 +58,14 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
         {
             var typeOfItem = player.gameObject.GetComponent<PlayerInventory>().Items[InventoryIndex]._ItemObj.GetComponent<Item>();
 
-            if ( ( (typeOfItem is Flower) || (typeOfItem is Seeds) ) && TileManager.Instance.IsEmptyOfItemViaMousePos<FlowerPot>(player.MousePos))
+            if ( ( (typeOfItem is Flower) || (typeOfItem is Seeds) ) && TileManager.Instance.IsEmptyOfItemViaMousePos<FlowerPot>(player.MousePos, out FlowerPot item))
             {
+                if (item is FlowerPotWithSeeds)
+                {
+                    RestartPanel();
+                    return;
+                }
+
                 RemoveItemFromInventorySlot();
             }
             else if (TileManager.Instance.IsEmptyOfItemViaMousePos(player.MousePos))
@@ -68,9 +74,7 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
             }
         }
 
-        GetComponent<RectTransform>().position = originalPos;
-        GetComponent<RectTransform>().SetParent(originalParent);
-        isDragging = false;
+        RestartPanel();       
 
     }
 
@@ -90,4 +94,10 @@ public class InventorySlotLogic : MonoBehaviour, IBeginDragHandler, IDragHandler
         player.gameObject.GetComponent<PlayerInventory>().RemoveItemFromInventory(InventoryIndex, player.MousePos);
     }
     
+    private void RestartPanel()
+    {
+        GetComponent<RectTransform>().position = originalPos;
+        GetComponent<RectTransform>().SetParent(originalParent);
+        isDragging = false;
+    }
 }
