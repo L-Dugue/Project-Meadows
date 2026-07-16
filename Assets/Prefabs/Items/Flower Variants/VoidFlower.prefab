@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2531
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6805642594498929080, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VoidFlower
       objectReference: {fileID: 0}
+    - target: {fileID: 7615385148751147182, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3163147
+      objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: ItemDesc
       value: These flowers only show their true colors when under the light of a
@@ -81,6 +85,10 @@ PrefabInstance:
       propertyPath: ItemTile
       value: 
       objectReference: {fileID: 11400000, guid: 7e6603cb609089746a341eda6ea9d184, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _yOffset
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: ItemPrice
       value: 20
@@ -121,6 +129,10 @@ PrefabInstance:
       propertyPath: _flowerInFlowerPot
       value: 
       objectReference: {fileID: 1713300253492206231, guid: 8868f0dc17d332e4c8732a9a30c95dca, type: 3}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _interactableZonePlacement.y
+      value: 0.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

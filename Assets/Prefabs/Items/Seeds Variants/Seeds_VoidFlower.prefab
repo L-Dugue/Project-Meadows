@@ -37,6 +37,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0e7ac9bea1992f946924f3a6cbd82275, type: 2}
     - target: {fileID: 2488279996649043872, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
+      propertyPath: _yOffset
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488279996649043872, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: ItemPrice
       value: 10
       objectReference: {fileID: 0}
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 378526f0569f7044582b13df92f01204, type: 2}
     - target: {fileID: 2488279996649043872, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: _interactionRange
-      value: 0.35
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2488279996649043872, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: useableFlowerPots
@@ -60,13 +64,17 @@ PrefabInstance:
       propertyPath: _interactableLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 2488279996649043872, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
+      propertyPath: _interactableZonePlacement.y
+      value: 0.33
+      objectReference: {fileID: 0}
     - target: {fileID: 4474382606286680120, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.69903
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474382606286680120, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.37909
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474382606286680120, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_LocalPosition.z
@@ -107,6 +115,14 @@ PrefabInstance:
     - target: {fileID: 6002521458791683764, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772131253790308220, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
+      propertyPath: m_Radius
+      value: 0.3431439
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772131253790308220, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3433762
       objectReference: {fileID: 0}
     - target: {fileID: 8772131253790308220, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_IsTrigger

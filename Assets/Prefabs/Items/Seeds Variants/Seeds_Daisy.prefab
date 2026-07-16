@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 5161096256316035784, guid: f8b65cb17aefced49922bf7aecb460af, type: 3}
     - target: {fileID: 4474382606286680120, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.69903
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474382606286680120, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.37909
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474382606286680120, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_LocalPosition.z
@@ -83,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 6002521458791683764, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
       propertyPath: m_Name
       value: Seeds_Daisy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772131253790308220, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
+      propertyPath: m_Radius
+      value: 0.37169576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772131253790308220, guid: 0d08fbd8f8ba07042aaf4df19acdad54, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3708521
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

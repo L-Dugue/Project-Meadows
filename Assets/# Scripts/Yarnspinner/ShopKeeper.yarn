@@ -9,6 +9,13 @@ Shop Keeper: Welcome to my shop! What are you looking for today?
     -> I would like to buy some items!
         Shop Keeper: I have quite a few items in stock today!
         <<open_market_buy Market>> 
+    -> Who is that lady over there?
+        Shop Keeper: Her? She is my cousin!
+        Shop Keeper: I am convinced she is stealing money from our grandmother.
+        Shop Keeper: She is constantly buying new items for her house, how is she even buying them? With what money?
+        Shop Keeper: [shake]SHE DOESN'T EVEN WORK![/shake]
+        Shop Keeper: Anyways... That was a tangent.
+        <<jump OpenShopDialogue>>
     -> Nothing right now.
         Shop Keeper: Gotcha! Come again soon!
         <<disallow_movement DialogueManager false>>

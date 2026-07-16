@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedFlower_InFlowerPot Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 750674884055565308, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
+      propertyPath: m_Radius
+      value: 0.287042
+      objectReference: {fileID: 0}
+    - target: {fileID: 750674884055565308, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3409725
+      objectReference: {fileID: 0}
     - target: {fileID: 1290594501898774486, guid: 82910ad8deb2e3a45a8e1275a392d993, type: 3}
       propertyPath: ItemTile
       value: 

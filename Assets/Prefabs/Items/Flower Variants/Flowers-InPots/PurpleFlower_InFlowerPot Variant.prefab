@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5122251645484798639, guid: b3ff155b98670884b9a2503974744677, type: 3}
+      propertyPath: m_Radius
+      value: 0.287042
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122251645484798639, guid: b3ff155b98670884b9a2503974744677, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3409725
+      objectReference: {fileID: 0}
     - target: {fileID: 5354457470689196699, guid: b3ff155b98670884b9a2503974744677, type: 3}
       propertyPath: m_Name
       value: PurpleFlower_InFlowerPot Variant

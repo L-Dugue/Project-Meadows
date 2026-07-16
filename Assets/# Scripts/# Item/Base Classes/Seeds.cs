@@ -7,6 +7,7 @@ public class Seeds : Item, IPlaceableOnItem
     [Header("Interaction Settings")]
     [SerializeField] private float _interactionRange = 1.0f;
     [SerializeField] private LayerMask _interactableLayer;
+    [SerializeField] private float _yOffset;
 
     [Header("Variant of Seeds In Pots")]
     [SerializeField] private UseableFlowerPots useableFlowerPots;
@@ -18,7 +19,7 @@ public class Seeds : Item, IPlaceableOnItem
 
     public void PlaceOnItem()
     {
-        Collider2D[] contacts = Physics2D.OverlapCircleAll(transform.position, _interactionRange, _interactableLayer);
+        Collider2D[] contacts = Physics2D.OverlapCircleAll(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + _yOffset), _interactionRange, _interactableLayer);
 
         foreach (Collider2D contact in contacts)
         {
@@ -40,7 +41,7 @@ public class Seeds : Item, IPlaceableOnItem
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _interactionRange);
+        Gizmos.DrawWireSphere(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + _yOffset), _interactionRange);
     }
 
 }

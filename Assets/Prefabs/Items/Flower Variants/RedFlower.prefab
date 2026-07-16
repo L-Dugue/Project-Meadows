@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedFlower
       objectReference: {fileID: 0}
+    - target: {fileID: 7615385148751147182, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3163147
+      objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: ItemDesc
       value: Very common, a cousin of the rare PinkFire Flower
@@ -80,6 +84,10 @@ PrefabInstance:
       propertyPath: ItemTile
       value: 
       objectReference: {fileID: 11400000, guid: 804f788ca8cf71247ae948603518a410, type: 2}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _yOffset
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
       propertyPath: ItemPrice
       value: 1
@@ -116,6 +124,10 @@ PrefabInstance:
       propertyPath: _flowerInFlowerPot
       value: 
       objectReference: {fileID: 8418727226993743354, guid: 9518202c9e3319b489e861263af0a71a, type: 3}
+    - target: {fileID: 8227155648762598532, guid: 36a84acd5c38c2942b945d5d3020e64f, type: 3}
+      propertyPath: _interactableZonePlacement.y
+      value: 0.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
